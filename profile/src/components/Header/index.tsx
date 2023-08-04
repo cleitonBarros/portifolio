@@ -1,6 +1,6 @@
 import * as S from "./style";
 
-import { List } from "@phosphor-icons/react";
+import { Spin as Hamburger } from "hamburger-react";
 
 export function Header() {
   return (
@@ -16,7 +16,7 @@ export function Header() {
             <p>EN</p>
           </li>
           <li title="menu">
-            <List size={32} />
+            <Hamburger size={32} duration={0.8} />
           </li>
         </ul>
       </S.Nav>
