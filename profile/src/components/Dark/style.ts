@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+
 export const Container = styled.div`
   width: 25vw;
   gap: 0.5rem;
@@ -11,9 +12,7 @@ export const Container = styled.div`
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 300;
-    &.dark {
-      color: ${({ theme }) => theme.COLORS.WHITE[100]};
-    }
+    color: ${({ theme }) => theme.COLORS.MODE.DARK};
   }
   input {
     cursor: pointer;
@@ -22,23 +21,17 @@ export const Container = styled.div`
     opacity: 0;
 
     &:hover + label {
-      text-decoration: line-through ${({ theme }) => theme.COLORS.PINK[500]};
-      &.dark {
-        text-decoration: line-through ${({ theme }) => theme.COLORS.GREEM[100]};
-      }
+      text-decoration: line-through ${({ theme }) => theme.COLORS.MODE.SLASH};
     }
     &:checked + label {
-      text-decoration: line-through ${({ theme }) => theme.COLORS.PINK[500]};
-      &.dark {
-        text-decoration: line-through ${({ theme }) => theme.COLORS.GREEM[100]};
-      }
+      text-decoration: line-through ${({ theme }) => theme.COLORS.MODE.SLASH};
     }
   }
 
-  @media ${({ theme }) => theme.DEVICE.tablet} {
+  @media (min-width: 768px) {
     flex-direction: row;
   }
-  @media ${({ theme }) => theme.DEVICE.desktop} {
+  @media (min-width: 1280px) {
     label {
       font-size: 2rem;
     }
@@ -47,9 +40,5 @@ export const Container = styled.div`
 export const Line = styled.div`
   width: 15vw;
   height: 1.5px;
-  background-color: ${({ theme }) => theme.COLORS.PURPLE[900]};
-
-  &.dark {
-    background-color: ${({ theme }) => theme.COLORS.WHITE[100]};
-  }
+  background-color: ${({ theme }) => theme.COLORS.MODE.BAR};
 `;

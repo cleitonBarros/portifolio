@@ -1,7 +1,5 @@
 import { styled } from "styled-components";
 
-import fundo from "../../assets/img/fundo.png";
-
 export const Header = styled.header`
   position: fixed;
   top: 2.25rem;
@@ -10,10 +8,10 @@ export const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media ${({ theme }) => theme.DEVICE.laptop} {
+  @media (min-width: 1130px) {
     top: 2.75rem;
   }
-  @media ${({ theme }) => theme.DEVICE.desktop} {
+  @media (min-width: 1280px) {
     top: 3.75rem;
   }
 `;
@@ -26,20 +24,14 @@ export const Nav = styled.nav`
   align-items: center;
 
   .logo {
-    background-image: url(${fundo});
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: ${({ theme }) => theme.COLORS.PURPLE[1000]};
+    color: ${({ theme }) => theme.COLORS.LOGO.STATIC};
     font-size: 3.5rem;
     font-weight: 600;
     font-family: "Fira Sans", sans-serif;
 
     transition: all 0.2s ease-in-out;
-    &.dark {
-      color: ${({ theme }) => theme.COLORS.WHITE[100]};
-    }
     &:hover {
-      color: transparent;
+      color: ${({ theme }) => theme.COLORS.LOGO.HOVER};
     }
   }
 
@@ -55,16 +47,13 @@ export const Nav = styled.nav`
         font-size: 1.5rem;
         font-weight: 400;
         font-family: "Fira Sans", sans-serif;
-        color: ${({ theme }) => theme.COLORS.PINK[500]};
+        color: ${({ theme }) => theme.COLORS.LANGUAGE};
         transition: all 0.5s ease-in-out;
-        &.dark {
-          color: ${({ theme }) => theme.COLORS.WHITE[100]};
-        }
       }
     }
   }
 
-  @media ${({ theme }) => theme.DEVICE.mobile} {
+  @media (min-width: 425px) {
     ul {
       gap: 3rem;
     }

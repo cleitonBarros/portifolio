@@ -8,44 +8,51 @@ import { Code, UserRectangle } from "@phosphor-icons/react";
 
 export function Home() {
   const useLanguage = useContext(LanguageContext);
-  const useDarkMode = useContext(DarkModeContext);
-  const isDark: string = useDarkMode?.darkMode === true ? " " : "dark";
+  const { darkMode } = useContext(DarkModeContext);
 
   return (
     <>
       <S.Container>
         <div className="text-intro">
-          <h3 className={`intro-id ${isDark}`}>
+          <h3
+            className={`animate__animated animate__fadeIn animate__slow intro-id `}
+          >
             {useLanguage?.t("myName")}{" "}
-            <div className={`name ${isDark}`}>
+            <div className={`name `}>
               Cleiton barros,
               <div className="wave-wrap">
-                <div className={`wave ${isDark}`}></div>
+                <div className={`wave `}></div>
               </div>
             </div>
           </h3>
 
-          <h3 className={`intro-id ${isDark}`}>
+          <h3
+            className={`animate__animated animate__fadeIn animate__slower intro-id `}
+          >
             {useLanguage?.t("myNickName")}{" "}
-            <div className={`name ${isDark}`}>
+            <div className={`name `}>
               Eli
               <div className="wave-wrap">
-                <div className={`wave ${isDark}`}></div>
+                <div className={`wave `}></div>
               </div>
             </div>
           </h3>
           <div className="into-roles">
-            <p className={`intro-role ${isDark}`}>{useLanguage?.t("role")}</p>
+            <p
+              className={`animate__animated animate__fadeIn animate__slower intro-role `}
+            >
+              {useLanguage?.t("role")}
+            </p>
           </div>
           <div className="into-links">
-            <ul>
+            <ul className={`animate__animated animate__fadeIn animate__slower`}>
               <li>
                 <div className="link-wrap">
                   <div className="link">
-                    <a className={isDark} href="#">
+                    <a href="#">
                       <Code
                         size={24}
-                        color={!useDarkMode?.darkMode ? "#00D2C1" : "#F31559"}
+                        color={darkMode === "dark" ? "#00D2C1" : "#F31559"}
                       />{" "}
                       {useLanguage?.t("projects")}
                     </a>
@@ -55,10 +62,10 @@ export function Home() {
               <li>
                 <div className="link-wrap">
                   <div className="link">
-                    <a className={isDark} href="#">
+                    <a href="#">
                       <UserRectangle
                         size={24}
-                        color={!useDarkMode?.darkMode ? "#00D2C1" : "#F31559"}
+                        color={darkMode === "dark" ? "#00D2C1" : "#F31559"}
                       />
                       {useLanguage?.t("about")}
                     </a>

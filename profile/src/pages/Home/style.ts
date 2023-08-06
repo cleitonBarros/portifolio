@@ -36,10 +36,9 @@ export const Container = styled.main`
       "wdth" 100;
     text-transform: none;
     line-height: 2;
-    color: ${({ theme }) => theme.COLORS.PURPLE[900]};
-
-    &.dark {
-      color: ${({ theme }) => theme.COLORS.GREEM[100]};
+    color: ${({ theme }) => theme.COLORS.PARAGRAPH};
+    .animate_slow4 {
+      --animate-duration: 4s;
     }
   }
 
@@ -47,24 +46,15 @@ export const Container = styled.main`
     position: relative;
     text-align: center;
 
-    .intro-id.dark {
-      color: ${({ theme }) => theme.COLORS.WHITE[100]};
-      -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.BEIGE[100]};
-    }
     .intro-id {
       line-height: normal;
-      color: transparent;
+      color: ${({ theme }) => theme.COLORS.H3};
       letter-spacing: 0.1rem;
       font-weight: 700;
-      -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.BLUE[500]};
-;
+      -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.STROCK};
       font-variation-settings:
         "wght" 800,
         "wdth" 100;
-
-      .name.dark {
-        color: ${({ theme }) => theme.COLORS.GREEM[100]};
-      }
       .name {
         text-transform: none;
         line-height: 0;
@@ -78,7 +68,7 @@ export const Container = styled.main`
           "wght" 800,
           "wdth" 125;
         letter-spacing: normal;
-        color: ${({ theme }) => theme.COLORS.PURPLE[800]};
+        color: ${({ theme }) => theme.COLORS.NAME};
         -webkit-text-stroke: 0;
         &:hover .wave-wrap .wave {
           animation: ${waving} 10s linear infinite;
@@ -115,6 +105,9 @@ export const Container = styled.main`
     .into-links {
       padding-top: 2rem;
       ul {
+        .slow5 {
+          --animate-duration: 30s;
+        }
         li {
           display: inline-flex;
           font-size: 1.5rem;
@@ -128,18 +121,12 @@ export const Container = styled.main`
               width: auto;
               margin-bottom: 3px;
               white-space: nowrap;
-              a.dark {
-                color: ${({ theme }) => theme.COLORS.WHITE[100]};
-                &:hover {
-                  color: ${({ theme }) => theme.COLORS.GREEM[100]};
-                }
-              }
               a {
                 font-size: 1.25rem;
                 font-variation-settings:
                   "wght" 500,
                   "wdth" 125;
-                color: ${({ theme }) => theme.COLORS.BLUE[500]};
+                color: ${({ theme }) => theme.COLORS.LIST.ITEM};
 
                 text-transform: lowercase;
                 text-decoration: none;
@@ -153,7 +140,7 @@ export const Container = styled.main`
                 transition: all 0.3s ease-in-out;
 
                 &:hover {
-                  color: ${({ theme }) => theme.COLORS.PURPLE[1000]};
+                  color: ${({ theme }) => theme.COLORS.LIST.ITEM_HOVER};
                 }
               }
             }
@@ -162,7 +149,7 @@ export const Container = styled.main`
       }
     }
   }
-  @media ${({ theme }) => theme.DEVICE.mobile} {
+  @media (min-width: 425px) {
     li {
       &:first-child {
         margin-right: 2rem;
@@ -173,7 +160,7 @@ export const Container = styled.main`
     }
   }
 
-  @media ${({ theme }) => theme.DEVICE.tablet} {
+  @media (min-width: 768px) {
     h3 {
       font-size: 3rem;
     }
@@ -181,7 +168,7 @@ export const Container = styled.main`
       font-size: 1.25rem;
     }
   }
-  @media ${({ theme }) => theme.DEVICE.desktop} {
+  @media (min-width: 1280px) {
     padding: 0 0;
     h3 {
       font-size: 4rem;

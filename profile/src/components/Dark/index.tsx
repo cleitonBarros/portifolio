@@ -1,30 +1,31 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { DarkModeContext } from "../../context/useDarkMode";
 import * as S from "./style";
 
 export function Dark() {
-  const useDarkMode = useContext(DarkModeContext);
-  const isDark: string = useDarkMode?.darkMode === true ? " " : "dark";
+  const { changeTheme } = useContext(DarkModeContext);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [menuState, toggleMenu] = useState<boolean>(true);
+
+  function handleToggleMenu() {
+    toggleMenu(menuState);
+  }
+
+  function handleChangeTheme() {
+    changeTheme();
+    handleToggleMenu();
+  }
+
   return (
-    <S.Container>
-      <input type="radio" name="mode" id="dark" checked />
-      <label
-        onClick={() => useDarkMode?.setDarkMode(true)}
-        title="dark mode"
-        htmlFor="dark"
-        className={isDark}
-      >
+    <S.Container className="animate__animated animate__fadeInDown">
+      <input type="radio" name="mode" id="dark" />
+      <label onClick={handleChangeTheme} title="dark mode" htmlFor="dark">
         Dark
       </label>
-      <S.Line className={isDark}></S.Line>
+      <S.Line></S.Line>
       <input type="radio" name="mode" id="light" />
-      <label
-        onClick={() => useDarkMode?.setDarkMode(false)}
-        title="light mode"
-        htmlFor="light"
-        className={isDark}
-      >
+      <label onClick={handleChangeTheme} title="light mode" htmlFor="light">
         Light
       </label>
     </S.Container>
