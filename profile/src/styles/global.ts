@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
+import background from "../assets/img/Background_Abstract.png";
+import backgroundDark from "../assets/img/dark.jpg";
+
 export default createGlobalStyle`
   *{
      margin: 0;
@@ -15,6 +18,17 @@ export default createGlobalStyle`
   }
 
   body{
+    background-color: ${({ theme }) => theme.COLORS.WHITE[200]};
+    &.dark{
+      background-image: url(${backgroundDark});
+    }
+
+    background-image: url(${background});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
     font-family: 'Fira Sans', sans-serif;
     overflow-y: hidden;
     -webkit-font-smoothing: antialiased;
