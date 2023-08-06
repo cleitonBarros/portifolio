@@ -1,3 +1,4 @@
+import back from "../../assets/img/Background_Abstract.png";
 import background from "../../assets/img/dark.jpg";
 
 export const darkModeTheme = {
@@ -23,6 +24,12 @@ export const darkModeTheme = {
       ITEM: "#F3F3F3",
       ITEM_HOVER: "#00D2C1"
     },
-    BACKGROUND: background
+    BACKGROUND: background,
+    NAV: {
+      BACKGROUND: back,
+      HOVER: "#00D2C1",
+      MENUTEXT: "transparent",
+      MENUSTROCK: "#606887"
+    }
   }
 };

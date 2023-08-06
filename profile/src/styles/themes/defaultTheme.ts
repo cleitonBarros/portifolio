@@ -1,4 +1,6 @@
 import background from "../../assets/img/Background_Abstract.png";
+import back from "../../assets/img/dark.jpg";
+
 export const defaultTheme = {
   COLORS: {
     LOGO: {
@@ -22,6 +24,12 @@ export const defaultTheme = {
       ITEM: "#606887",
       ITEM_HOVER: "#341933"
     },
-    BACKGROUND: background
+    BACKGROUND: background,
+    NAV: {
+      BACKGROUND: back,
+      HOVER: "#F31559",
+      MENUTEXT: "#F3F3F3",
+      MENUSTROCK: "#FFF6E0"
+    }
   }
 };
