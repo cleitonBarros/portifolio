@@ -1,40 +1,27 @@
+import background from "../../assets/img/Background_Abstract.png";
 export const defaultTheme = {
   COLORS: {
-    BLACK: {
-      "900": "#000000",
-      "500": "#272829"
+    LOGO: {
+      STATIC: "#341933",
+      HOVER: "#F31559"
     },
-    BLUE: {
-      "500": "#606887"
+    MODE: {
+      LIGHT: "#341933",
+      BAR: "#341933",
+      DARK: "#341933",
+      SLASH: "#F31559"
     },
-    BEIGE: {
-      "100": "#FFF6E0"
+    LANGUAGE: "#F31559",
+    MENU: "#F31559",
+    H3: "transparent",
+    NAME: "#400D51",
+    STROCK: "#606887",
+    ICON: "#F31559",
+    PARAGRAPH: "#2A2F4F",
+    LIST: {
+      ITEM: "#606887",
+      ITEM_HOVER: "#341933"
     },
-    GREEM: {
-      "100": "#00D2C1"
-    },
-    GREY: {
-      "300": "#61677A",
-      "100": "#D8D9DA"
-    },
-    PURPLE: {
-      "1000": "#341933",
-      "900": "#2A2F4F",
-      "800": "#400D51"
-    },
-    PINK: {
-      "500": "#F31559"
-    },
-    WHITE: {
-      "200": "#E4E4E4",
-      "100": "#F3F3F3"
-    }
-  },
-  DEVICE: {
-    min: `(min-width: 375px)`,
-    mobile: `(min-width: 425px)`,
-    tablet: `(min-width: 768px)`,
-    laptop: `(min-width: 1130px)`,
-    desktop: `(min-width: 1280px)`
+    BACKGROUND: background
   }
 };

@@ -1,17 +1,20 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
-import { ThemeProvider } from "styled-components";
-
+import "./lib/i18n";
 import App from "./App.tsx";
+import { DarkModeProvider } from "./context/useDarkMode.tsx";
+import { ChangeLanguageProvider } from "./context/useLanguage.tsx";
 import GlobalStyles from "./styles/global.ts";
-import { defaultTheme } from "./styles/themes/defaultTheme.ts";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyles />
-      <App />
-    </ThemeProvider>
+    <ChangeLanguageProvider>
+      <DarkModeProvider>
+        <Suspense fallback={<div>Loading...</div>} />
+        <GlobalStyles />
+        <App />
+      </DarkModeProvider>
+    </ChangeLanguageProvider>
   </React.StrictMode>
 );
