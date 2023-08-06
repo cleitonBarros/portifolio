@@ -29,13 +29,15 @@ export const Nav = styled.nav`
     background-image: url(${fundo});
     background-clip: text;
     -webkit-background-clip: text;
-
+    color: ${({ theme }) => theme.COLORS.PURPLE[1000]};
     font-size: 3.5rem;
     font-weight: 600;
     font-family: "Fira Sans", sans-serif;
 
     transition: all 0.2s ease-in-out;
-
+    &.dark {
+      color: ${({ theme }) => theme.COLORS.WHITE[100]};
+    }
     &:hover {
       color: transparent;
     }
@@ -45,7 +47,7 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 0.75rem;
 
     li {
       cursor: pointer;
@@ -53,8 +55,11 @@ export const Nav = styled.nav`
         font-size: 1.5rem;
         font-weight: 400;
         font-family: "Fira Sans", sans-serif;
-
+        color: ${({ theme }) => theme.COLORS.PINK[500]};
         transition: all 0.5s ease-in-out;
+        &.dark {
+          color: ${({ theme }) => theme.COLORS.WHITE[100]};
+        }
       }
     }
   }
