@@ -14,6 +14,7 @@ i18n
   .init({
     lng: "pt",
     debug: true,
+    load: "all",
     detection: {
       order: ["queryString", "cookie"],
       caches: ["cookie"]

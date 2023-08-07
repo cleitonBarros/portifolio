@@ -12,7 +12,7 @@ interface contextProps {
   children: ReactNode;
 }
 
-export const LanguageContext = createContext<languageProps | null>(null);
+export const LanguageContext = createContext({} as languageProps);
 
 export function ChangeLanguageProvider({ children }: contextProps) {
   const {
