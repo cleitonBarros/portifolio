@@ -7,7 +7,7 @@ import * as S from "./style";
 import { Code, UserRectangle } from "@phosphor-icons/react";
 
 export function Home() {
-  const useLanguage = useContext(LanguageContext);
+  const { t } = useContext(LanguageContext);
   const { darkMode } = useContext(DarkModeContext);
 
   return (
@@ -17,7 +17,7 @@ export function Home() {
           <h3
             className={`animate__animated animate__fadeIn animate__slow intro-id `}
           >
-            {useLanguage?.t("myName")}{" "}
+            {t("myName")}{" "}
             <div className={`name `}>
               Cleiton barros,
               <div className="wave-wrap">
@@ -29,7 +29,7 @@ export function Home() {
           <h3
             className={`animate__animated animate__fadeIn animate__slower intro-id `}
           >
-            {useLanguage?.t("myNickName")}{" "}
+            {t("myNickName")}{" "}
             <div className={`name `}>
               Eli
               <div className="wave-wrap">
@@ -41,7 +41,7 @@ export function Home() {
             <p
               className={`animate__animated animate__fadeIn animate__slower intro-role `}
             >
-              {useLanguage?.t("role")}
+              {t("role")}
             </p>
           </div>
           <div className="into-links">
@@ -54,7 +54,7 @@ export function Home() {
                         size={24}
                         color={darkMode === "dark" ? "#00D2C1" : "#F31559"}
                       />{" "}
-                      {useLanguage?.t("projects")}
+                      {t("projects")}
                     </a>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export function Home() {
                         size={24}
                         color={darkMode === "dark" ? "#00D2C1" : "#F31559"}
                       />
-                      {useLanguage?.t("about")}
+                      {t("about")}
                     </a>
                   </div>
                 </div>
