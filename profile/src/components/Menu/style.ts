@@ -11,7 +11,7 @@ export const Header = styled.div`
 
   background-color: #fff6e0;
   background-image: url(${({ theme }) => theme.COLORS.NAV.BACKGROUND});
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -60,6 +60,11 @@ export const Nav = styled.div`
         color: ${({ theme }) => theme.COLORS.NAV.MENUTEXT};
         letter-spacing: 0.1rem;
         -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.NAV.MENUSTROCK};
+
+        &.active {
+          color: ${({ theme }) => theme.COLORS.NAV.HOVER};
+          -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.NAV.HOVER};
+        }
       }
       &:hover a {
         color: ${({ theme }) => theme.COLORS.NAV.HOVER};

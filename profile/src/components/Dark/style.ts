@@ -25,6 +25,7 @@ export const Container = styled.div`
     }
     &:checked + label {
       text-decoration: line-through ${({ theme }) => theme.COLORS.MODE.SLASH};
+      pointer-events: none;
     }
   }
 

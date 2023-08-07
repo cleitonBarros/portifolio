@@ -1,7 +1,7 @@
 import "animate.css";
 
-//import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
 import { LanguageContext } from "../../context/useLanguage";
 import * as S from "./style";
@@ -17,19 +17,44 @@ export function Menu({ classe }: MenuProps) {
       <S.Nav>
         <ul>
           <li>
-            <a href="#">{t("menu.home")}</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/"
+            >
+              {t("menu.home")}
+            </NavLink>
           </li>
           <li>
-            <a href="#">{t("menu.about")}</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/about"
+            >
+              {t("menu.about")}
+            </NavLink>
           </li>
           <li>
-            <a href="#">{t("menu.projects")}</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/projects"
+            >
+              {t("menu.projects")}
+            </NavLink>
           </li>
           <li>
-            <a href="#">{t("menu.experience")}</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/experiences"
+            >
+              {t("menu.experience")}
+            </NavLink>
           </li>
           <li>
-            <a href="#">{t("menu.contact")}</a>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/contact"
+            >
+              {t("menu.contact")}
+            </NavLink>
           </li>
         </ul>
       </S.Nav>

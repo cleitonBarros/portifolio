@@ -1,5 +1,6 @@
-import { useContext, useState } from "react";
 import "animate.css";
+import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import { DarkModeContext } from "../../context/useDarkMode";
 import { LanguageContext } from "../../context/useLanguage";
@@ -30,9 +31,9 @@ export function Header() {
       <S.Header>
         <S.Nav>
           <div className="animate__animated animate__fadeInDown " title="Logo">
-            <a className="logo " href="#">
+            <NavLink className="logo " to="/">
               ılǝ.
-            </a>
+            </NavLink>
           </div>
           <Dark />
 
