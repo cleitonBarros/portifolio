@@ -18,6 +18,7 @@ export const Header = styled.header`
 
 export const Nav = styled.nav`
   width: 100%;
+  width: 1440px;
   max-width: 90%;
   display: flex;
   justify-content: space-between;

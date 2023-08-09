@@ -55,7 +55,7 @@ export function Header() {
           </ul>
         </S.Nav>
       </S.Header>
-      <Menu classe={isOpen} />
+      <Menu Open={isOpen} close={setOpen} />
     </>
   );
 }

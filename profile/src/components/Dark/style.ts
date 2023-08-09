@@ -17,7 +17,7 @@ export const Container = styled.div`
   input {
     cursor: pointer;
     display: none;
-    display: hidden;
+    visibility: hidden;
     opacity: 0;
 
     &:hover + label {
@@ -31,10 +31,13 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
+    label {
+      font-size: 2rem;
+    }
   }
   @media (min-width: 1280px) {
     label {
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
   }
 `;
