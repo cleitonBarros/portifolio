@@ -30,6 +30,9 @@ export const darkModeTheme = {
       HOVER: "#00D2C1",
       MENUTEXT: "transparent",
       MENUSTROCK: "#606887"
-    }
+    },
+    TEXT: "#F3F3F3",
+    TEXTBKG: "#44444457",
+    TRANSLATE: "#444"
   }
 };

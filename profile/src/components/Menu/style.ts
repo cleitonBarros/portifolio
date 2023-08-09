@@ -7,7 +7,7 @@ export const Header = styled.div`
   left: 0;
   z-index: 100;
   width: 100%;
-  min-height: calc(100vh - 7.5rem);
+  min-height: calc(100vh - 100px);
 
   background-color: #fff6e0;
   background-image: url(${({ theme }) => theme.COLORS.NAV.BACKGROUND});

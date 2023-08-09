@@ -21,11 +21,17 @@ export default createGlobalStyle`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    overflow-y: hidden;
 
     
     font-family: 'Fira Sans', sans-serif;
-    overflow-y: hidden;
+
     -webkit-font-smoothing: antialiased;
+  }
+  body:has(#Home){
+    overflow-y: hidden;
+
   }
 
   html ::-webkit-scrollbar {

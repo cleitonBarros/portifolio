@@ -30,6 +30,9 @@ export const defaultTheme = {
       HOVER: "#F31559",
       MENUTEXT: "#F3F3F3",
       MENUSTROCK: "#FFF6E0"
-    }
+    },
+    TEXT: "#222",
+    TEXTBKG: "#F3155909",
+    TRANSLATE: "#341933"
   }
 };

@@ -45,8 +45,13 @@ export const Nav = styled.nav`
     li {
       cursor: pointer;
       p {
-        font-size: 1.5rem;
-        font-weight: 400;
+        background-color: ${({ theme }) => theme.COLORS.TRANSLATE};
+        padding: 0.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        font-size: 1.6rem;
+        font-weight: 600;
         font-family: "Fira Sans", sans-serif;
         color: ${({ theme }) => theme.COLORS.LANGUAGE};
         transition: all 0.5s ease-in-out;
