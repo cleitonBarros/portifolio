@@ -12,35 +12,29 @@ export function Home() {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <S.Container>
+    <S.Container id="Home">
       <S.TextField>
-        <h3
-          className={`animate__animated animate__fadeIn animate__slow intro-id `}
-        >
+        <h3 className="animate__animated animate__fadeIn animate__slow  ">
           {t("myName")}{" "}
-          <div className={`name `}>
+          <div className="name">
             Cleiton barros,
             <div className="wave-wrap">
-              <div className={`wave `}></div>
+              <div className="wave"></div>
             </div>
           </div>
         </h3>
 
-        <h3
-          className={`animate__animated animate__fadeIn animate__slower intro-id `}
-        >
+        <h3 className="animate__animated animate__fadeIn animate__slower ">
           {t("myNickName")}{" "}
-          <div className={`name `}>
+          <div className="name">
             Eli
             <div className="wave-wrap">
-              <div className={`wave `}></div>
+              <div className="wave"></div>
             </div>
           </div>
         </h3>
         <div className="role">
-          <p
-            className={`animate__animated animate__fadeIn animate__slower intro-role `}
-          >
+          <p className="animate__animated animate__fadeIn animate__slower">
             {t("role")}
           </p>
         </div>
