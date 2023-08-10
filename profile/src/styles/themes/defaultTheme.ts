@@ -32,7 +32,7 @@ export const defaultTheme = {
       MENUSTROCK: "#FFF6E0"
     },
     TEXT: "#222",
-    TEXTBKG: "#F3155909",
+    TEXTBKG: "#FFFFFFcc",
     TRANSLATE: "#341933"
   }
 };

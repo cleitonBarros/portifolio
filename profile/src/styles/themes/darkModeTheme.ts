@@ -32,7 +32,7 @@ export const darkModeTheme = {
       MENUSTROCK: "#606887"
     },
     TEXT: "#F3F3F3",
-    TEXTBKG: "#44444457",
+    TEXTBKG: "#444444cc",
     TRANSLATE: "#444"
   }
 };
