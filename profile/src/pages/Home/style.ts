@@ -13,12 +13,7 @@ const waving = keyframes`
 }
 `;
 export const Container = styled.div`
-  display: flex;
   min-width: 100%;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1.75rem;
 
   h3 {
     text-transform: uppercase;
@@ -106,7 +101,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     h3 {
       font-size: 3rem;
     }
@@ -205,7 +200,7 @@ export const TextField = styled.div`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     h3 {
       font-size: 3rem;
     }

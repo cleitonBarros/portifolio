@@ -6,7 +6,6 @@ export const Section = styled.section`
   justify-content: center;
   width: 100%;
   max-width: 90rem;
-  padding: 0 1.5rem;
 `;
 
 export const Container = styled.main`
@@ -14,5 +13,7 @@ export const Container = styled.main`
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: calc(100vh - 11rem);
   flex-direction: column;
+  padding: 0rem 2rem;
 `;

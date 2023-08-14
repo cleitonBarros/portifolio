@@ -2,34 +2,38 @@ import { styled } from "styled-components";
 
 export const Header = styled.div`
   border-top: 2px solid #000;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   z-index: 100;
-  width: 100%;
-  min-height: calc(100vh - 100px);
+  width: 55%;
+  min-height: 100vh;
 
   background-color: #fff6e0;
   background-image: url(${({ theme }) => theme.COLORS.NAV.BACKGROUND});
-  background-position: center center;
+  background-position: left center;
   background-size: cover;
   background-repeat: no-repeat;
 
-  transition: all 0.5s ease-in-out;
-  transform: translateY(100%);
+  transition: all 0.5s;
+  transform: translateX(-100%);
 
   &.open {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 420px) {
-    min-height: calc(100vh - 8.5rem);
+
+  @media (min-width: 450px) {
+    width: 40%;
   }
-  @media (min-width: 1130px) {
-    min-height: calc(100vh - 12.5rem);
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+  @media (min-width: 1440px) {
+    width: 15%;
   }
 `;
 
@@ -51,10 +55,7 @@ export const Nav = styled.div`
         padding: 1rem;
         text-transform: uppercase;
         font-weight: 500;
-        font-variation-settings:
-          "wght" 800,
-          "wdth" 125;
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         font-family: "Poppins", sans-serif;
         line-height: normal;
         color: ${({ theme }) => theme.COLORS.NAV.MENUTEXT};
@@ -78,7 +79,7 @@ export const Nav = styled.div`
       li {
         a {
           font-weight: 700;
-          font-size: 2.4rem;
+          font-size: 2rem;
         }
       }
     }

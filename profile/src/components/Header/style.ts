@@ -1,25 +1,17 @@
 import { styled } from "styled-components";
 
 export const Header = styled.header`
-  position: fixed;
-  top: 2.25rem;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1130px) {
-    top: 2.75rem;
-  }
-  @media (min-width: 1280px) {
-    top: 3.75rem;
-  }
+  padding: 3rem 0 0 0;
 `;
 
 export const Nav = styled.nav`
-  width: 100%;
   width: 1440px;
   max-width: 90%;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

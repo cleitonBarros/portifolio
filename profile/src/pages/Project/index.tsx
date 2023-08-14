@@ -1,14 +1,10 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import { LanguageContext } from "../../context/useLanguage";
 import * as S from "./style";
+
 import { GithubLogo, LinkedinLogo, Paperclip } from "@phosphor-icons/react";
 
-export function Contact() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { t } = useContext(LanguageContext);
-
+export function Projects() {
   return (
     <>
       <S.Container>

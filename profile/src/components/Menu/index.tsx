@@ -44,14 +44,6 @@ export function Menu({ Open, close }: MenuProps) {
               {t("menu.projects")}
             </NavLink>
           </li>
-          <li onClick={closeMenu}>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/contact"
-            >
-              {t("menu.contact")}
-            </NavLink>
-          </li>
         </ul>
       </S.Nav>
     </S.Header>

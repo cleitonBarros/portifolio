@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  margin-top: 7rem;
+
   display: flex;
   align-items: center;
   width: 100vw;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
   .body {
     width: 100%;
-    max-width: 30rem;
+    max-width: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -55,26 +55,11 @@ export const Wrapper = styled.div`
     }
   }
 
-  @media (min-width: 425px) {
-    margin-top: 5rem;
-  }
-
   @media (min-width: 1025px) {
     .body {
-      flex-direction: column;
-
-      .barraVertical {
-        width: 50vw;
-        height: 0.5rem;
-      }
-
       ul {
-        width: 50vw;
-        flex-direction: row;
-        justify-content: space-around;
-
         li {
-          display: flex;
+
           a {
             font-size: 2.4rem;
           }
