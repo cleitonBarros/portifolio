@@ -16,21 +16,15 @@ export default createGlobalStyle`
 
   body{
     background-color: #FFF6E0;
-
     background-image: url(${({ theme }) => theme.COLORS.BACKGROUND});
-    background-position: center;
+    background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow-y: hidden;
-
-    
+    background-repeat: no-repeat; 
     font-family: 'Fira Sans', sans-serif;
-
+    min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
   body:has(#Home){
-    overflow-y: hidden;
 
   }
 
