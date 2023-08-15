@@ -15,6 +15,10 @@ export default createGlobalStyle`
   }
 
   body{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
     background-color: #FFF6E0;
     background-image: url(${({ theme }) => theme.COLORS.BACKGROUND});
     background-position: center center;

@@ -13,6 +13,7 @@ const waving = keyframes`
 }
 `;
 export const Container = styled.div`
+ padding-top: 12rem;
   min-width: 100%;
 
   h3 {
