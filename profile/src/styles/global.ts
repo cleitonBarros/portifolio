@@ -24,9 +24,7 @@ export default createGlobalStyle`
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
-  body:has(#Home){
 
-  }
 
   html ::-webkit-scrollbar {
     width: 6px;

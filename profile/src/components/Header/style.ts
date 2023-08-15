@@ -5,7 +5,12 @@ export const Header = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 3rem 0 0 0;
+  background: ${({ theme }) => theme.COLORS.NAV.NAVBAR};
+  z-index: 90;
 `;
 
 export const Nav = styled.nav`

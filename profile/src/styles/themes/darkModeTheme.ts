@@ -29,7 +29,8 @@ export const darkModeTheme = {
       BACKGROUND: back,
       HOVER: "#00D2C1",
       MENUTEXT: "transparent",
-      MENUSTROCK: "#606887"
+      MENUSTROCK: "#606887",
+      NAVBAR: "#000"
     },
     TEXT: "#F3F3F3",
     TEXTBKG: "#444444cc",
