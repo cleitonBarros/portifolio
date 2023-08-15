@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 
 import "./lib/i18n";
+
 import App from "./App.tsx";
 import { DarkModeProvider } from "./context/useDarkMode.tsx";
 import { ChangeLanguageProvider } from "./context/useLanguage.tsx";

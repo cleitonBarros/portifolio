@@ -1,5 +1,5 @@
 import "animate.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { DarkModeContext } from "../../context/useDarkMode";
@@ -15,6 +15,8 @@ export function Header() {
   const { darkMode } = useContext(DarkModeContext);
   const [isOpen, setOpen] = useState<boolean>(false);
   const Langue = useLanguage?.currentLanguage;
+  const [isScroll, setIsScroll] = useState<boolean>(false);
+
   <Hamburger
     onToggle={(toggled) => {
       if (toggled) {
@@ -25,10 +27,20 @@ export function Header() {
       }
     }}
   />;
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true);
+        return;
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, [isScroll]);
 
   return (
     <>
-      <S.Header>
+      <S.Header className={isScroll ? "scrolled" : ""}>
         <S.Nav>
           <div className="animate__animated animate__fadeInDown " title="Logo">
             <NavLink className="logo " to="/">

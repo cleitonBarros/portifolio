@@ -9,8 +9,13 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   padding: 3rem 0 0 0;
-  background: ${({ theme }) => theme.COLORS.NAV.NAVBAR};
+  background: transparent;
   z-index: 90;
+  transition: all 0.1s ease-out;
+
+  &.scrolled {
+    background: ${({ theme }) => theme.COLORS.NAV.NAVBAR};
+  }
 `;
 
 export const Nav = styled.nav`
