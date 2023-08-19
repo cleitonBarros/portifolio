@@ -16,6 +16,9 @@
             "title": "About",
             "description": "Hey, I'm Cleiton Barros or Eli as nickname. I'm a front-end web developer and UI/UX designer. Passionate about the French language and a lover of Asian culture. I m to create beautiful websites, applications, and layouts that will leave people ETONNÉS. My main tools are TypeScript, ReactJS, and Styled-components. If you're interested in knowing more about, ",
             "click": "here !"
+        },
+        "project": {
+            "button": "Go to page"
         }
     }
 }

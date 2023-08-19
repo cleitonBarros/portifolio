@@ -15,7 +15,10 @@
         "aboutPage": {
             "title": "Sobre",
             "description": "Olá, me chamo Cleiton barros ou Eli como apelido, sou desenvolvedor web front-end e UI/UX designer. Apaixonado pela língua francesa e amante da cultura asiática. Quero criar site, aplicativos e layouts bonito e que deixe as pessoas ETONNÉS. Minhas principais ferramentas são o typeScript, reactJs e Styled-components, caso queria saber quais são as outras, ",
-            "click":"aqui !"
+            "click": "aqui !"
+        },
+        "project": {
+            "button": "Ir ao site"
         }
     }
 }
