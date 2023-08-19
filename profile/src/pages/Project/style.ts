@@ -2,70 +2,64 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
- padding-top: 12rem;
   display: flex;
   min-width: 100%;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 0 1.75rem;
 `;
 
 export const Wrapper = styled.div`
-
+  padding-top: 12rem;
+  font-family: "Franklin Gothic Medium", sans-serif;
   display: flex;
   align-items: center;
-  width: 100vw;
   justify-content: center;
+  overflow: hidden;
+  margin: 0;
 
-  .body {
-    width: 100%;
-    max-width: 20rem;
+  .container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-
-    .barraVertical {
-      width: 0.5rem;
-      height: 50vh;
-      background-color: ${({ theme }) => theme.COLORS.MODE.SLASH};
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      gap: 3rem;
-
-      li {
-        & > svg {
-          fill: ${({ theme }) => theme.COLORS.NAME};
-        }
-        a {
-          font-size: 3rem;
-          text-transform: uppercase;
-          transition: all 0.5s;
-          color: ${({ theme }) => theme.COLORS.TEXT};
-
-          &:hover {
-            color: ${({ theme }) => theme.COLORS.MODE.SLASH};
-          }
-        }
-      }
+    width: 90vw;
+    flex-wrap: wrap;
+    
+    .painel {
+      border: 1px dashed black;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 42rem;
+      border-radius: 50px;
+      color: snow;
+      cursor: pointer;
+      flex: 0.5;
+      margin: 10px;
+      position: relative;
+      transition: flex 0.7s ease-in;
     }
   }
-
-  @media (min-width: 1025px) {
-    .body {
-      ul {
-        li {
-
-          a {
-            font-size: 2.4rem;
-          }
-        }
-      }
+  .painel a{
+    font-size: 24px;
+    position: absolute;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    background-color: #f4f4f4;
+  }
+  .painel:hover {
+    flex: 3;
+  }
+  .painel:hover a{
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.6s;
+  }
+  @media (max-width: 500px) {
+    .container {
+      width: 80vw;
     }
   }
 `;
