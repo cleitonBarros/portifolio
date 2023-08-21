@@ -1,19 +1,21 @@
-import background from "../../assets/img/Background_Abstract.png";
-import back from "../../assets/img/dark.jpg";
-
 export const defaultTheme = {
   COLORS: {
-    LOGO: {
-      STATIC: "#341933",
-      HOVER: "#F31559"
+    BACKGROUND: "#FFF",
+    SECTION: "snow",
+    HEADER: {
+      LOGO: {
+        STATIC: "#341933",
+        HOVER: "#F31559"
+      },
+      MODE: {
+        LIGHT: "#341933",
+        BAR: "#341933",
+        DARK: "#341933",
+        SLASH: "#F31559"
+      },
+      LANGUAGE: "#F31559",
+      TRANSLATE: "#341933"
     },
-    MODE: {
-      LIGHT: "#341933",
-      BAR: "#341933",
-      DARK: "#341933",
-      SLASH: "#F31559"
-    },
-    LANGUAGE: "#F31559",
     MENU: "#F31559",
     H3: "transparent",
     NAME: "#400D51",
@@ -24,16 +26,13 @@ export const defaultTheme = {
       ITEM: "#606887",
       ITEM_HOVER: "#341933"
     },
-    BACKGROUND: background,
     NAV: {
-      BACKGROUND: back,
       HOVER: "#F31559",
-      MENUTEXT: "#F3F3F3",
-      MENUSTROCK: "#FFF6E0",
+      MENUTEXT: "#111",
+      MENUSTROCK: "#111",
       NAVBAR: "#FFF6E0;"
     },
     TEXT: "#222",
-    TEXTBKG: "#FFFFFFcc",
-    TRANSLATE: "#341933"
+    TEXTBKG: "#FFFFFFcc"
   }
 };

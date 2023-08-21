@@ -1,19 +1,21 @@
-import back from "../../assets/img/Background_Abstract.png";
-import background from "../../assets/img/dark.jpg";
-
 export const darkModeTheme = {
   COLORS: {
-    LOGO: {
-      STATIC: "#F3F3F3",
-      HOVER: "#00D2C1"
+    BACKGROUND: "#111",
+    SECTION: "#1A1919",
+    HEADER: {
+      LOGO: {
+        STATIC: "#F3F3F3",
+        HOVER: "#00D2C1"
+      },
+      MODE: {
+        LIGHT: "#F3F3F3",
+        BAR: "#F3F3F3",
+        DARK: "#F3F3F3",
+        SLASH: "#00D2C1"
+      },
+      LANGUAGE: "#F3F3F3",
+      TRANSLATE: "#444"
     },
-    MODE: {
-      LIGHT: "#F3F3F3",
-      BAR: "#F3F3F3",
-      DARK: "#F3F3F3",
-      SLASH: "#00D2C1"
-    },
-    LANGUAGE: "#F3F3F3",
     MENU: "#00D2C1",
     H3: "#F3F3F3",
     NAME: "#00D2C1",
@@ -24,16 +26,13 @@ export const darkModeTheme = {
       ITEM: "#F3F3F3",
       ITEM_HOVER: "#00D2C1"
     },
-    BACKGROUND: background,
     NAV: {
-      BACKGROUND: back,
       HOVER: "#00D2C1",
-      MENUTEXT: "transparent",
-      MENUSTROCK: "#606887",
+      MENUTEXT: "#111",
+      MENUSTROCK: "#111",
       NAVBAR: "#000"
     },
     TEXT: "#F3F3F3",
-    TEXTBKG: "#444444cc",
-    TRANSLATE: "#444"
+    TEXTBKG: "#444444cc"
   }
 };
