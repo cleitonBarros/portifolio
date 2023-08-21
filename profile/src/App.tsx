@@ -1,11 +1,12 @@
-import { AppRoutes } from "./routes/app.routes";
+import { Header } from "./components/Header";
 
-function App() {
+import { LandingPage } from "./pages/Home";
+
+export default function App() {
   return (
     <>
-      <AppRoutes />
+      <Header />
+      <LandingPage />
     </>
   );
 }
-
-export default App;

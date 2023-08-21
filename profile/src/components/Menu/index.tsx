@@ -1,7 +1,6 @@
 import "animate.css";
 
 import { Dispatch, SetStateAction, useContext } from "react";
-import { NavLink } from "react-router-dom";
 
 import { LanguageContext } from "../../context/useLanguage";
 import * as S from "./style";
@@ -21,28 +20,13 @@ export function Menu({ Open, close }: MenuProps) {
       <S.Nav>
         <ul>
           <li onClick={closeMenu}>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/"
-            >
-              {t("menu.home")}
-            </NavLink>
+            <a href="#">{t("menu.home")}</a>
           </li>
           <li onClick={closeMenu}>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/about"
-            >
-              {t("menu.about")}
-            </NavLink>
+            <a href="#about">{t("menu.about")}</a>
           </li>
           <li onClick={closeMenu}>
-            <NavLink
-              className={({ isActive }) => (isActive ? "active" : "")}
-              to="/projects"
-            >
-              {t("menu.projects")}
-            </NavLink>
+            <a href="#project">{t("menu.projects")}</a>
           </li>
         </ul>
       </S.Nav>

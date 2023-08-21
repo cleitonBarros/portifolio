@@ -12,7 +12,7 @@ export const Container = styled.div`
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 300;
-    color: ${({ theme }) => theme.COLORS.MODE.DARK};
+    color: ${({ theme }) => theme.COLORS.HEADER.MODE.DARK};
   }
   input {
     cursor: pointer;
@@ -21,10 +21,12 @@ export const Container = styled.div`
     opacity: 0;
 
     &:hover + label {
-      text-decoration: line-through ${({ theme }) => theme.COLORS.MODE.SLASH};
+      text-decoration: line-through
+        ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
     }
     &:checked + label {
-      text-decoration: line-through ${({ theme }) => theme.COLORS.MODE.SLASH};
+      text-decoration: line-through
+        ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
       pointer-events: none;
     }
   }
@@ -44,5 +46,5 @@ export const Container = styled.div`
 export const Line = styled.div`
   width: 15vw;
   height: 1.5px;
-  background-color: ${({ theme }) => theme.COLORS.MODE.BAR};
+  background-color: ${({ theme }) => theme.COLORS.HEADER.MODE.BAR};
 `;

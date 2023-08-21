@@ -1,5 +1,7 @@
 import { styled } from "styled-components";
 
+import dia from "./../../assets/img/dia.jpg";
+
 export const Header = styled.div`
   border-top: 2px solid #000;
   position: fixed;
@@ -10,9 +12,9 @@ export const Header = styled.div`
   min-height: 100vh;
 
   background-color: #fff6e0;
-  background-image: url(${({ theme }) => theme.COLORS.NAV.BACKGROUND});
-  background-position: left center;
+  background-image: url(${dia});
   background-size: cover;
+  background-position: left;
   background-repeat: no-repeat;
 
   transition: all 0.5s;
@@ -54,9 +56,9 @@ export const Nav = styled.div`
       a {
         padding: 1rem;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 1.5rem;
-        font-family: "Poppins", sans-serif;
+        font-family: "Roboto", sans-serif;
         line-height: normal;
         color: ${({ theme }) => theme.COLORS.NAV.MENUTEXT};
         letter-spacing: 0.1rem;
@@ -74,7 +76,7 @@ export const Nav = styled.div`
     }
   }
 
-  @media (min-width: 1130px) {
+  @media (min-width: 1024px) {
     ul {
       li {
         a {

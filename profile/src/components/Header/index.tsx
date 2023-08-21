@@ -1,6 +1,5 @@
 import "animate.css";
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 
 import { DarkModeContext } from "../../context/useDarkMode";
 import { LanguageContext } from "../../context/useLanguage";
@@ -43,9 +42,9 @@ export function Header() {
       <S.Header className={isScroll ? "scrolled" : ""}>
         <S.Nav>
           <div className="animate__animated animate__fadeInDown " title="Logo">
-            <NavLink className="logo " to="/">
+            <a className="logo " href="#">
               ılǝ.
-            </NavLink>
+            </a>
           </div>
           <Dark />
 

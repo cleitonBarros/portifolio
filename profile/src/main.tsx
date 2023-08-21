@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./lib/i18n";
@@ -12,7 +12,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChangeLanguageProvider>
       <DarkModeProvider>
-        <Suspense fallback={<div>Loading...</div>} />
         <GlobalStyles />
         <App />
       </DarkModeProvider>

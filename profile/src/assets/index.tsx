@@ -2,6 +2,7 @@ import cleiton from "./img/cleitonperfil.png";
 import diulio from "./img/diulioperfil.png";
 import doctor from "./img/doctor.png";
 import erick from "./img/erickperfil.png";
+import mysthik from "./img/mysthik.png";
 
 export const slides = [
   {
@@ -9,6 +10,12 @@ export const slides = [
     url: erick,
     alt: "Ir ao site",
     link: "https://erickalvezartstudio.vercel.app/"
+  },
+  {
+    id: 5,
+    url: mysthik,
+    alt: "Ir ao site",
+    link: "https://mysthik.vercel.app/"
   },
   {
     id: 2,
