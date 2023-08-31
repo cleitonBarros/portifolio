@@ -141,33 +141,63 @@ export function LandingPage() {
       </S.Skills>
       <S.Project id="project">
         {width > 600 ? (
-          <div className="container">
-            {slides.map((img) => (
-              <div
-                key={img.id}
-                style={{ backgroundImage: `url(${img.url})` }}
-                className="painel animate__animated animate__fadeInDown"
-              >
-                <a href={img.link} target="_blank" rel="noreferrer">
-                  {t("project.button")}
-                </a>
-              </div>
-            ))}
-          </div>
+          <>
+            <div className="container">
+              {slides.first.map((img) => (
+                <div
+                  key={img.id}
+                  style={{ backgroundImage: `url(${img.url})` }}
+                  className="painel animate__animated animate__fadeInDown"
+                >
+                  <a href={img.link} target="_blank" rel="noreferrer">
+                    {t("project.button")}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="container">
+              {slides.second.map((img) => (
+                <div
+                  key={img.id}
+                  style={{ backgroundImage: `url(${img.url})` }}
+                  className="painel animate__animated animate__fadeInDown"
+                >
+                  <a href={img.link} target="_blank" rel="noreferrer">
+                    {t("project.button")}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </>
         ) : (
-          <div className="mobile">
-            {slides.map((img) => (
-              <div
-                key={img.id}
-                style={{ backgroundImage: `url(${img.url})` }}
-                className="painel animate__animated animate__fadeInDown"
-              >
-                <a href={img.link} target="_blank" rel="noreferrer">
-                  {t("project.button")}
-                </a>
-              </div>
-            ))}
-          </div>
+          <>
+            <div className="mobile">
+              {slides.first.map((img) => (
+                <div
+                  key={img.id}
+                  style={{ backgroundImage: `url(${img.url})` }}
+                  className="painel animate__animated animate__fadeInDown"
+                >
+                  <a href={img.link} target="_blank" rel="noreferrer">
+                    {t("project.button")}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="mobile">
+              {slides.second.map((img) => (
+                <div
+                  key={img.id}
+                  style={{ backgroundImage: `url(${img.url})` }}
+                  className="painel animate__animated animate__fadeInDown"
+                >
+                  <a href={img.link} target="_blank" rel="noreferrer">
+                    {t("project.button")}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </>
         )}
       </S.Project>
     </>
