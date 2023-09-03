@@ -19,7 +19,18 @@ export default createGlobalStyle`
     font-family: 'Fira Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-
+  .Paragraph-1,
+  .Paragraph-2,
+  .role,
+  .link-1,
+  .link-2,
+  .img,
+  .title,
+  .sit,
+  .painel,
+  .skill-1,.skill-2,.skill-3,.skill-4,.skill-5,.skill-6,.skill-7,.skill-8,.skill-9{
+    visibility: hidden;
+  }
   html ::-webkit-scrollbar {
     width: 6px;
   }
