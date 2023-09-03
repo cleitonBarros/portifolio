@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import {
   BiLogoReact,
   BiLogoJavascript,
@@ -17,17 +17,43 @@ import { UseWindowSize } from "../../hooks/useWidthSize";
 import * as S from "./style";
 
 import { Code, UserRectangle } from "@phosphor-icons/react";
+import ScrollReveal from "scrollreveal";
 
 export function LandingPage() {
   const [width] = UseWindowSize();
   const { t } = useContext(LanguageContext);
   const { darkMode } = useContext(DarkModeContext);
 
+  useEffect(() => {
+    ScrollReveal({
+      distance: "60px",
+      duration: 1200
+    });
+    ScrollReveal().reveal(".Paragraph-1", { delay: 300, origin: "top" });
+    ScrollReveal().reveal(".Paragraph-2", { delay: 600, origin: "left" });
+    ScrollReveal().reveal(".role", { delay: 500, origin: "bottom" });
+    ScrollReveal().reveal(".link-1", { delay: 700, origin: "left" });
+    ScrollReveal().reveal(".link-2", { delay: 700, origin: "right" });
+    ScrollReveal().reveal(".title", { delay: 300, origin: "top" });
+    ScrollReveal().reveal(".img", { delay: 400, origin: "right" });
+    ScrollReveal().reveal(".sit", { delay: 800, origin: "bottom" });
+    ScrollReveal().reveal(".painel", { delay: 800, origin: "top" });
+    ScrollReveal().reveal(".skill-1", { delay: 400, origin: "left" });
+    ScrollReveal().reveal(".skill-2", { delay: 600, origin: "top" });
+    ScrollReveal().reveal(".skill-3", { delay: 800, origin: "right" });
+    ScrollReveal().reveal(".skill-4", { delay: 1000, origin: "left" });
+    ScrollReveal().reveal(".skill-5", { delay: 1200, origin: "top" });
+    ScrollReveal().reveal(".skill-6", { delay: 1400, origin: "right" });
+    ScrollReveal().reveal(".skill-7", { delay: 1600, origin: "left" });
+    ScrollReveal().reveal(".skill-8", { delay: 1800, origin: "top" });
+    ScrollReveal().reveal(".skill-9", { delay: 2000, origin: "right" });
+  }, []);
+
   return (
     <>
       <S.Home>
         <S.TextField id="inicio">
-          <h3 className="animate__animated animate__fadeIn animate__slow  ">
+          <h3 className="Paragraph-1">
             {t("myName")}{" "}
             <div className="name">
               Cleiton barros,
@@ -37,7 +63,7 @@ export function LandingPage() {
             </div>
           </h3>
 
-          <h3 className="animate__animated animate__fadeIn animate__slower ">
+          <h3 className="Paragraph-1">
             {t("myNickName")}{" "}
             <div className="name">
               Eli
@@ -47,13 +73,11 @@ export function LandingPage() {
             </div>
           </h3>
           <div className="role">
-            <p className="animate__animated animate__fadeIn animate__slower">
-              {t("role")}
-            </p>
+            <p>{t("role")}</p>
           </div>
           <S.Links>
-            <ul className="animate__animated animate__fadeIn animate__slower slow5">
-              <li>
+            <ul>
+              <li className="link-1">
                 <div className="link-wrap">
                   <div className="link">
                     <a href="#project">
@@ -66,7 +90,7 @@ export function LandingPage() {
                   </div>
                 </div>
               </li>
-              <li>
+              <li className="link-2">
                 <div className="link-wrap">
                   <div className="link">
                     <a href="#about">
@@ -84,15 +108,12 @@ export function LandingPage() {
         </S.TextField>
       </S.Home>
       <S.About id="about">
-        <div className="img animate__animated animate__fadeIn animate__slow">
+        <div className="img">
           <img src={foto} alt="eu" />
         </div>
-        <div className="Text animate__animated animate__fadeIn animate__slower">
-          <h2>
-            <div></div>
-            {t("aboutPage.title")}
-          </h2>
-          <p>
+        <div className="Text">
+          <h2 className="title">{t("aboutPage.title")}</h2>
+          <p className="Paragraph-2">
             {t("aboutPage.description")}
             <a
               href="https://github.com/cleitonBarros"
@@ -102,39 +123,39 @@ export function LandingPage() {
               {t("aboutPage.click")}
             </a>
           </p>
-          <h4>
+          <h4 className="sit">
             &quot; Voir le monde en noir et blanc c&apos;est se priver des
             couleurs de la vie &quot; - Morgana
           </h4>
         </div>
       </S.About>
       <S.Skills id="skill">
-        <ul className="animate__animated animate__fadeIn  animate__slow">
-          <li>
+        <ul>
+          <li className="skill-1">
             <BiLogoReact />
           </li>
-          <li>
+          <li className="skill-2">
             <BiLogoTypescript />
           </li>
-          <li>
+          <li className="skill-3">
             <SiStyledcomponents />
           </li>
-          <li>
+          <li className="skill-4">
             <DiHtml5 />
           </li>
-          <li>
+          <li className="skill-5">
             <DiCss3 />
           </li>
-          <li>
+          <li className="skill-6">
             <BiLogoJavascript />
           </li>
-          <li>
+          <li className="skill-7">
             <DiSass />
           </li>
-          <li>
+          <li className="skill-8">
             <BiLogoBootstrap />
           </li>
-          <li>
+          <li className="skill-9">
             <BiLogoTailwindCss />
           </li>
         </ul>
@@ -147,7 +168,7 @@ export function LandingPage() {
                 <div
                   key={img.id}
                   style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel animate__animated animate__fadeInDown"
+                  className="painel"
                 >
                   <a href={img.link} target="_blank" rel="noreferrer">
                     {t("project.button")}
@@ -160,7 +181,7 @@ export function LandingPage() {
                 <div
                   key={img.id}
                   style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel animate__animated animate__fadeInDown"
+                  className="painel"
                 >
                   <a href={img.link} target="_blank" rel="noreferrer">
                     {t("project.button")}
@@ -176,7 +197,7 @@ export function LandingPage() {
                 <div
                   key={img.id}
                   style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel animate__animated animate__fadeInDown"
+                  className="painel "
                 >
                   <a href={img.link} target="_blank" rel="noreferrer">
                     {t("project.button")}
@@ -189,7 +210,7 @@ export function LandingPage() {
                 <div
                   key={img.id}
                   style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel animate__animated animate__fadeInDown"
+                  className="painel"
                 >
                   <a href={img.link} target="_blank" rel="noreferrer">
                     {t("project.button")}

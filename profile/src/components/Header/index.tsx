@@ -41,14 +41,14 @@ export function Header() {
     <>
       <S.Header className={isScroll ? "scrolled" : ""}>
         <S.Nav>
-          <div className="animate__animated animate__fadeInDown " title="Logo">
+          <div title="Logo">
             <a className="logo " href="#">
               ılǝ.
             </a>
           </div>
           <Dark />
 
-          <ul className="animate__animated animate__fadeInDown">
+          <ul>
             <li title="translate">
               <p onClick={useLanguage?.handleLanguageChange}>
                 {Langue === "pt" ? "PT" : "EN"}

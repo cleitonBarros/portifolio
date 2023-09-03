@@ -19,7 +19,7 @@ export function Dark() {
   }, []);
   const { changeTheme } = useContext(DarkModeContext);
   return (
-    <S.Container className="animate__animated animate__fadeInDown">
+    <S.Container>
       <input type="radio" name="mode" id="dark" />
       <label onClick={changeTheme} title="dark mode" htmlFor="dark">
         Dark
