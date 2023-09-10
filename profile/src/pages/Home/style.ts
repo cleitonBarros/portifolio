@@ -240,7 +240,7 @@ export const Links = styled.div`
           margin-bottom: 3px;
           white-space: nowrap;
           a {
-            font-size: 1.25rem; 
+            font-size: 1.25rem;
             color: ${({ theme }) => theme.COLORS.LIST.ITEM};
 
             text-transform: lowercase;
@@ -351,7 +351,6 @@ export const About = styled.div`
 
     .Text {
       max-width: 50rem;
-
       h2 {
         font-size: 2.5rem;
       }
@@ -445,94 +444,160 @@ export const Skills = styled.div`
 `;
 
 export const Project = styled.div`
-  padding: 6rem 6%;
+  padding: 4rem 5%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  gap: 5rem;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 
-  .container {
+  .project-item {
     display: flex;
-    width: 90vw;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
 
-    .painel {
-      border: 1px dashed black;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 42rem;
-      border-radius: 50px;
+    .box-video {
+      max-width: 700px;
+      height: auto;
+      filter: grayscale(1);
       cursor: pointer;
-      flex: 0.5;
-      margin: 10px;
-      position: relative;
-      transition: flex 0.7s ease-in;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+        &:hover + div.hoverme {
+          display: none;
+        }
+      }
+      .hoverme {
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+      }
     }
-    .painel a {
-      font-size: 24px;
-      position: absolute;
-      border: none;
-      border-radius: 20px;
+    .project-text {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0.5rem;
+
+        .squard {
+          background-color: ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
+          width: 8px;
+          height: 24px;
+        }
+        h2 {
+          color: red;
+          font-size: 2rem;
+          font-weight: 500;
+          font-family: "Fira Sans", sans-serif;
+          color: ${({ theme }) => theme.COLORS.NAME};
+        }
+      }
+
+      p {
+        color: ${({ theme }) => theme.COLORS.TEXT};
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+
+      .bange {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        p {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          font-size: 1rem;
+          background-color: ${({ theme }) => theme.COLORS.HEADER.TRANSLATE};
+          color: ${({ theme }) => theme.COLORS.ICON};
+        }
+      }
+    }
+
+    a {
+      background-color: ${({ theme }) => theme.COLORS.ICON};
+      margin-top: 10px;
       padding: 0.5rem 1rem;
-      bottom: 20px;
-      left: 20px;
-      margin: 0;
-      opacity: 0;
-      cursor: pointer;
-      background-color: #f4f4f4;
+      color: ${({ theme }) => theme.COLORS.BACKGROUND};
+      font-size: 1rem;
+      font-weight: 600;
     }
-    .painel:hover {
-      flex: 3;
-    }
-    .painel:hover a {
-      opacity: 1;
-      transition: opacity 0.4s ease-in 0.6s;
-    }
-  }
-
-  .mobile {
-    width: 90vw;
-
-    .painel {
-      border: 1px dashed black;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 5rem;
-      border-radius: 50px;
-      cursor: pointer;
-      margin: 10px;
-      position: relative;
-      transition: all 0.7s ease-in;
-    }
-    .painel a {
-      font-size: 1.25rem;
-      position: absolute;
-      border: none;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      bottom: 20px;
-      left: 20px;
-      margin: 0;
-      opacity: 0;
-      cursor: pointer;
-      background-color: #f4f4f4;
-    }
-    .painel:hover {
-      height: 30rem;
-    }
-    .painel:hover a {
-      opacity: 1;
-      transition: opacity 0.4s ease-in 0.6s;
-    }
-  }
-  @media (min-width: 425px) {
-    padding: 10rem 10%;
   }
   @media (min-width: 765px) {
+    .project-item {
+      .project-text {
+        .squard {
+          width: 8px;
+          height: 30px;
+        }
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 500;
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .project-item {
+      flex-direction: row;
+    }
+  }
+  @media (min-width: 1280px) {
+    .project-item {
+      .project-text {
+        h2 {
+          color: blue;
+          font-size: 3rem;
+          font-weight: 600;
+        }
+        p {
+          font-size: 1.75rem;
+          font-weight: 400;
+        }
+        .bange {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          p {
+            padding: 1rem;
+            font-weight: 500;
+            border-radius: 1rem;
+            font-size: 1.25rem;
+          }
+        }
+      }
+      a {
+        font-size: 1.5rem;
+      }
+    }
   }
 `;

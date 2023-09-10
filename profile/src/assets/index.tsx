@@ -1,51 +1,70 @@
-import barbe from "./img/barber.png";
-import cleiton from "./img/cleitonperfil.png";
-import diulio from "./img/diulioperfil.png";
-import doctor from "./img/doctor.png";
-import erick from "./img/erickperfil.png";
-import mysthik from "./img/mysthik.png";
+// import diulio from "./img/diulioperfil.png";
+import barbe from "./videos/bem.mp4";
+import cleiton from "./videos/cleiton.mp4";
+import doctor from "./videos/doctor.mp4";
+import erick from "./videos/Erick.mp4";
+import mysthik from "./videos/mysthik.mp4";
 
 export const slides = {
   first: [
     {
       id: 1,
+      title: "ErickArti",
       url: erick,
-      alt: "Ir ao site",
-      link: "https://erickalvezartstudio.vercel.app/"
+      link: "https://erickalvezartstudio.vercel.app/",
+      tech: [
+        "react",
+        "html",
+        "css",
+        "typescript",
+        "styled-components",
+        "bootstrap"
+      ]
     },
 
     {
       id: 2,
+      title: "BarbeEtMoustache",
       url: barbe,
-      alt: "Ir ao site",
-      link: "https://barbe-et-moustache.vercel.app/"
+      link: "https://barbe-et-moustache.vercel.app/",
+      tech: ["html", "css", "sass", "scrollReveal"]
+    },
+    {
+      id: 5,
+      title: "Portfolio",
+      url: cleiton,
+      link: "https://cleitonfrontendengineer.vercel.app/",
+      tech: [
+        "react",
+        "html",
+        "css",
+        "typescript",
+        "styled-components",
+        "i18n",
+        "scrollReveal"
+      ]
     },
     {
       id: 3,
-      url: cleiton,
-      alt: "Ir ao site",
-      link: "https://cleitonfrontendengineer.vercel.app/"
-    }
-  ],
-  second: [
-    {
-      id: 4,
+      title: "Mysthik",
       url: mysthik,
       alt: "Ir ao site",
-      link: "https://mysthik.vercel.app/"
+      link: "https://mysthik.vercel.app/",
+      tech: [
+        "react",
+        "html",
+        "css",
+        "typescript",
+        "styled-components",
+        "scrollReveal"
+      ]
     },
-
     {
-      id: 5,
-      url: diulio,
-      alt: "Ir ao site",
-      link: "https://diulio.vercel.app/"
-    },
-    {
-      id: 6,
+      id: 4,
+      title: "DoctorCare",
       url: doctor,
-      alt: "Ir ao site",
-      link: "https://cleitonbarros.github.io/DoctorCare/"
+      link: "https://cleitonbarros.github.io/DoctorCare/",
+      tech: ["html", "css", "javascript", "swipe"]
     }
   ]
 };

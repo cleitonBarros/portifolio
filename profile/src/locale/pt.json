@@ -18,6 +18,7 @@
             "click": "aqui !"
         },
         "project": {
+            "text":"Construido com:",
             "button": "Ir ao site"
         }
     }

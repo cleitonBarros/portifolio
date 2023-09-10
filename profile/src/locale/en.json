@@ -18,6 +18,7 @@
             "click": "here !"
         },
         "project": {
+            "text":"Built with:",
             "button": "Go to page"
         }
     }

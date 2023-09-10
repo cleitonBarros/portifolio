@@ -13,18 +13,31 @@ import { slides } from "../../assets";
 import foto from "../../assets/img/foto.png";
 import { DarkModeContext } from "../../context/useDarkMode";
 import { LanguageContext } from "../../context/useLanguage";
-import { UseWindowSize } from "../../hooks/useWidthSize";
 import * as S from "./style";
 
 import { Code, UserRectangle } from "@phosphor-icons/react";
 import ScrollReveal from "scrollreveal";
 
 export function LandingPage() {
-  const [width] = UseWindowSize();
   const { t } = useContext(LanguageContext);
   const { darkMode } = useContext(DarkModeContext);
 
   useEffect(() => {
+    const clips = document?.querySelectorAll("video");
+
+    if (clips) {
+      for (let i = 0; i < clips.length; i++) {
+        clips[i].addEventListener("mouseenter", () => {
+          clips[i].play();
+        });
+      }
+
+      for (let i = 0; i < clips.length; i++) {
+        clips[i].addEventListener("mouseout", () => {
+          clips[i].pause();
+        });
+      }
+    }
     ScrollReveal({
       distance: "60px",
       duration: 1200
@@ -32,13 +45,19 @@ export function LandingPage() {
     ScrollReveal().reveal(".Paragraph-1", { delay: 300, origin: "top" });
     ScrollReveal().reveal(".Paragraph-2", { delay: 600, origin: "left" });
     ScrollReveal().reveal(".role", { delay: 500, origin: "bottom" });
-    ScrollReveal().reveal(".link-1", { delay: 700, origin: "left" });
-    ScrollReveal().reveal(".link-2", { delay: 700, origin: "right" });
+    ScrollReveal().reveal(".link-1", {
+      delay: 700,
+      origin: "left"
+    });
+    ScrollReveal().reveal(".link-2, .bange", { delay: 700, origin: "right" });
     ScrollReveal().reveal(".title", { delay: 300, origin: "top" });
     ScrollReveal().reveal(".img", { delay: 400, origin: "right" });
     ScrollReveal().reveal(".sit", { delay: 800, origin: "bottom" });
     ScrollReveal().reveal(".painel", { delay: 800, origin: "top" });
-    ScrollReveal().reveal(".skill-1", { delay: 400, origin: "left" });
+    ScrollReveal().reveal(".skill-1, .box-video", {
+      delay: 400,
+      origin: "left"
+    });
     ScrollReveal().reveal(".skill-2", { delay: 600, origin: "top" });
     ScrollReveal().reveal(".skill-3", { delay: 800, origin: "right" });
     ScrollReveal().reveal(".skill-4", { delay: 1000, origin: "left" });
@@ -112,7 +131,9 @@ export function LandingPage() {
           <img src={foto} alt="eu" />
         </div>
         <div className="Text">
-          <h2 className="title">{t("aboutPage.title")}</h2>
+          <h2 className="title">
+            <div className="squard"></div> {t("aboutPage.title")}
+          </h2>
           <p className="Paragraph-2">
             {t("aboutPage.description")}
             <a
@@ -161,7 +182,37 @@ export function LandingPage() {
         </ul>
       </S.Skills>
       <S.Project id="project">
-        {width > 600 ? (
+        {slides.first.map((video) => (
+          <>
+            <div className="project-item" key={video.id}>
+              <div className="box-video">
+                <div className="hoverme">Hover me</div>
+                <video src={video.url} loop muted></video>
+              </div>
+              <div className="project-text">
+                <div className="title">
+                  <div className="squard"></div>
+                  <h2>{video.title}</h2>
+                </div>
+                <p className="Paragraph-2"> {t("project.text")}</p>
+                <div className="bange">
+                  {video.tech.map((techs) => (
+                    <p key={video.id}>{techs}</p>
+                  ))}
+                </div>
+                <a
+                  target="_blank"
+                  href={video.link}
+                  rel="noreferrer"
+                  className="sit"
+                >
+                  {t("project.button")}
+                </a>
+              </div>
+            </div>
+          </>
+        ))}
+        {/* {width > 600 ? (
           <>
             <div className="container">
               {slides.first.map((img) => (
@@ -219,7 +270,7 @@ export function LandingPage() {
               ))}
             </div>
           </>
-        )}
+        )} */}
       </S.Project>
     </>
   );
