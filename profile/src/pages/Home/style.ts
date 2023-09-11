@@ -463,9 +463,12 @@ export const Project = styled.div`
     width: 100%;
     gap: 2rem;
 
-    .box-video {
+    .box-img {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      border-width: 0px;
+      width: 100%;
       max-width: 700px;
-      height: auto;
       filter: grayscale(1);
       cursor: pointer;
 
@@ -473,11 +476,16 @@ export const Project = styled.div`
         filter: grayscale(0);
       }
 
-      video {
+      .parallax {
         width: 100%;
-        height: auto;
-        &:hover + div.hoverme {
-          display: none;
+        height: 25rem;
+        background-size: cover;
+        background-position: left top;
+        transition: background-position-y 0.8s ease-in;
+
+        &:hover {
+          background-position-y: 100%;
+          transition: background-position-y 8s ease-in;
         }
       }
       .hoverme {
@@ -567,6 +575,14 @@ export const Project = styled.div`
     }
   }
   @media (min-width: 1024px) {
+    .project-item {
+      .box-img {
+        width: 100%;
+        .parallax {
+          height: 32rem;
+        }
+      }
+    }
     .project-item {
       flex-direction: row;
     }

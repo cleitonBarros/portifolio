@@ -28,7 +28,7 @@ export default createGlobalStyle`
   .title,
   .sit,
   .painel,
-  .skill-1,.skill-2,.skill-3,.skill-4,.skill-5,.skill-6,.skill-7,.skill-8,.skill-9,.box-video ,.bange{
+  .skill-1,.skill-2,.skill-3,.skill-4,.skill-5,.skill-6,.skill-7,.skill-8,.skill-9,.box-img ,.bange{
     visibility: hidden;
   }
   html ::-webkit-scrollbar {

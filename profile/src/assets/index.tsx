@@ -1,16 +1,16 @@
 // import diulio from "./img/diulioperfil.png";
-import barbe from "./videos/bem.mp4";
-import cleiton from "./videos/cleiton.mp4";
-import doctor from "./videos/doctor.mp4";
-import erick from "./videos/Erick.mp4";
-import mysthik from "./videos/mysthik.mp4";
+import barbe from "./img/bem.png";
+import doctor from "./img/Doctor.png";
+import Erick from "./img/Erick.png";
+import mysthik from "./img/Mysthik.png";
+import cleiton from "./img/cleiton.png";
 
 export const slides = {
   first: [
     {
       id: 1,
       title: "ErickArti",
-      url: erick,
+      url: Erick,
       link: "https://erickalvezartstudio.vercel.app/",
       tech: [
         "react",

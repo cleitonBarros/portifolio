@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import {
   BiLogoReact,
   BiLogoJavascript,
@@ -54,7 +54,7 @@ export function LandingPage() {
     ScrollReveal().reveal(".img", { delay: 400, origin: "right" });
     ScrollReveal().reveal(".sit", { delay: 800, origin: "bottom" });
     ScrollReveal().reveal(".painel", { delay: 800, origin: "top" });
-    ScrollReveal().reveal(".skill-1, .box-video", {
+    ScrollReveal().reveal(".skill-1, .box-img", {
       delay: 400,
       origin: "left"
     });
@@ -68,6 +68,10 @@ export function LandingPage() {
     ScrollReveal().reveal(".skill-9", { delay: 2000, origin: "right" });
   }, []);
 
+  const inputRef = useRef(null);
+  function handleScroll() {
+    console.log(inputRef);
+  }
   return (
     <>
       <S.Home>
@@ -182,27 +186,34 @@ export function LandingPage() {
         </ul>
       </S.Skills>
       <S.Project id="project">
-        {slides.first.map((video) => (
+        {slides.first.map((img) => (
           <>
-            <div className="project-item" key={video.id}>
-              <div className="box-video">
+            <div className="project-item" key={img.id}>
+              <div className="box-img">
                 <div className="hoverme">Hover me</div>
-                <video src={video.url} loop muted></video>
+                <div
+                  ref={inputRef}
+                  onMouseEnter={handleScroll}
+                  className="parallax"
+                  style={{
+                    backgroundImage: `url(${img.url})`
+                  }}
+                ></div>
               </div>
               <div className="project-text">
                 <div className="title">
                   <div className="squard"></div>
-                  <h2>{video.title}</h2>
+                  <h2>{img.title}</h2>
                 </div>
                 <p className="Paragraph-2"> {t("project.text")}</p>
                 <div className="bange">
-                  {video.tech.map((techs) => (
-                    <p key={video.id}>{techs}</p>
+                  {img.tech.map((techs) => (
+                    <p key={img.id}>{techs}</p>
                   ))}
                 </div>
                 <a
                   target="_blank"
-                  href={video.link}
+                  href={img.link}
                   rel="noreferrer"
                   className="sit"
                 >
@@ -212,65 +223,6 @@ export function LandingPage() {
             </div>
           </>
         ))}
-        {/* {width > 600 ? (
-          <>
-            <div className="container">
-              {slides.first.map((img) => (
-                <div
-                  key={img.id}
-                  style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel"
-                >
-                  <a href={img.link} target="_blank" rel="noreferrer">
-                    {t("project.button")}
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="container">
-              {slides.second.map((img) => (
-                <div
-                  key={img.id}
-                  style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel"
-                >
-                  <a href={img.link} target="_blank" rel="noreferrer">
-                    {t("project.button")}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="mobile">
-              {slides.first.map((img) => (
-                <div
-                  key={img.id}
-                  style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel "
-                >
-                  <a href={img.link} target="_blank" rel="noreferrer">
-                    {t("project.button")}
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className="mobile">
-              {slides.second.map((img) => (
-                <div
-                  key={img.id}
-                  style={{ backgroundImage: `url(${img.url})` }}
-                  className="painel"
-                >
-                  <a href={img.link} target="_blank" rel="noreferrer">
-                    {t("project.button")}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </>
-        )} */}
       </S.Project>
     </>
   );
