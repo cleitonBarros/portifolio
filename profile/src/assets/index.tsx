@@ -1,9 +1,9 @@
 // import diulio from "./img/diulioperfil.png";
 import barbe from "./img/bem.png";
-import doctor from "./img/Doctor.png";
-import Erick from "./img/Erick.png";
-import mysthik from "./img/Mysthik.png";
 import cleiton from "./img/cleiton.png";
+import doctor from "./img/doctor.png";
+import Erick from "./img/Erick.png";
+import mysthik from "./img/mysthik.png";
 
 export const slides = {
   first: [
