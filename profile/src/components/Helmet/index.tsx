@@ -25,7 +25,7 @@ export default function helmet() {
         property="og:description"
         content="Cleiton Elias de Barros Moura é um desenvolvedor web front-end e UI/UX Designer, apaixonado pela língua francesa e amante da cultura asiática. Especializado na criação de landing pages tem como missão criar site, aplicativos e layouts bonito e que deixe as pessoas ETONNÉS."
       />
-      <meta property="og:image" content="./logo.png" />
+      <meta property="og:image" content="./../../assets/img/back.png" />
       <meta property="twitter:card" content="summary_large_image" />
       <meta
         property="twitter:url"
@@ -36,7 +36,7 @@ export default function helmet() {
         property="twitter:description"
         content="Cleiton Elias de Barros Moura é um desenvolvedor web front-end e UI/UX Designer, apaixonado pela língua francesa e amante da cultura asiática. Especializado na criação de landing pages tem como missão criar site, aplicativos e layouts bonito e que deixe as pessoas ETONNÉS."
       />
-      <meta property="twitter:image" content="./logo.png" />
+      <meta property="twitter:image" content="./../../assets/img/back.png" />
     </Helmet>
   );
 }

@@ -1,11 +1,12 @@
 // import diulio from "./img/diulioperfil.png";
+import pdf from "./cleitonElias_Dev_frontend.pdf";
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
 import doctor from "./img/doctor.png";
 import Erick from "./img/Erick.png";
 import mysthik from "./img/mysthik.png";
 
-export const slides = {
+export const itens = {
   first: [
     {
       id: 1,
@@ -66,5 +67,6 @@ export const slides = {
       link: "https://cleitonbarros.github.io/DoctorCare/",
       tech: ["html", "css", "javascript", "swipe"]
     }
-  ]
+  ],
+  pdf: pdf
 };

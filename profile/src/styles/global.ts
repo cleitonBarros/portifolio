@@ -21,6 +21,7 @@ export default createGlobalStyle`
   }
   .Paragraph-1,
   .Paragraph-2,
+  #download,
   .role,
   .link-1,
   .link-2,

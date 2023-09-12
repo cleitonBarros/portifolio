@@ -324,6 +324,24 @@ export const About = styled.section`
         text-align: end;
       }
     }
+    footer {
+      cursor: pointer;
+      a {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        width: 10.5rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+      svg {
+        fill: ${({ theme }) => theme.COLORS.TEXT};
+      }
+
+      &:hover svg {
+        filter: brightness(2);
+      }
+    }
   }
 
   .img {
@@ -603,7 +621,7 @@ export const Project = styled.section`
           display: flex;
           flex-wrap: wrap;
           gap: 1rem;
-          li{
+          li {
             padding: 1rem;
             font-weight: 500;
             border-radius: 1rem;

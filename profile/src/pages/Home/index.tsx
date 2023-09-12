@@ -9,13 +9,13 @@ import {
 import { DiCss3, DiHtml5, DiSass } from "react-icons/di";
 import { SiStyledcomponents } from "react-icons/si";
 
-import { slides } from "../../assets";
+import { itens } from "../../assets";
 import foto from "../../assets/img/foto.png";
 import { DarkModeContext } from "../../context/useDarkMode";
 import { LanguageContext } from "../../context/useLanguage";
 import * as S from "./style";
 
-import { Code, UserRectangle } from "@phosphor-icons/react";
+import { Code, ReadCvLogo, UserRectangle } from "@phosphor-icons/react";
 import ScrollReveal from "scrollreveal";
 
 export function LandingPage() {
@@ -60,9 +60,15 @@ export function LandingPage() {
     });
     ScrollReveal().reveal(".skill-2", { delay: 600, origin: "top" });
     ScrollReveal().reveal(".skill-3", { delay: 800, origin: "right" });
-    ScrollReveal().reveal(".skill-4", { delay: 1000, origin: "left" });
+    ScrollReveal().reveal(".skill-4, #download", {
+      delay: 1000,
+      origin: "left"
+    });
     ScrollReveal().reveal(".skill-5", { delay: 1200, origin: "top" });
-    ScrollReveal().reveal(".skill-6", { delay: 1400, origin: "right" });
+    ScrollReveal().reveal(".skill-6", {
+      delay: 1400,
+      origin: "right"
+    });
     ScrollReveal().reveal(".skill-7", { delay: 1600, origin: "left" });
     ScrollReveal().reveal(".skill-8", { delay: 1800, origin: "top" });
     ScrollReveal().reveal(".skill-9", { delay: 2000, origin: "right" });
@@ -149,13 +155,21 @@ export function LandingPage() {
               {t("aboutPage.click")}
             </a>
           </p>
+          <cite>
+            <h4 className="sit">
+              &quot; Voir le monde en noir et blanc c&apos;est se priver des
+              couleurs de la vie &quot; - Morgana
+            </h4>
+          </cite>
           <footer>
-            <cite>
-              <h4 className="sit">
-                &quot; Voir le monde en noir et blanc c&apos;est se priver des
-                couleurs de la vie &quot; - Morgana
-              </h4>
-            </cite>
+            <a
+              id="download"
+              href={itens.pdf}
+              download="CleitonBarros_Frontend Developer"
+            >
+              <ReadCvLogo size={50} />
+              <span>Curriculo</span>
+            </a>
           </footer>
         </article>
       </S.About>
@@ -191,7 +205,7 @@ export function LandingPage() {
         </ul>
       </S.Skills>
       <S.Project id="project">
-        {slides.first.map((img) => (
+        {itens.first.map((img) => (
           <>
             <article className="project-item" key={img.id}>
               <picture className="box-img">
