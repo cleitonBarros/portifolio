@@ -15,10 +15,15 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.HEADER.MODE.DARK};
   }
   input {
-    cursor: pointer;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 
     &:hover + label {
       text-decoration: line-through
@@ -28,6 +33,9 @@ export const Container = styled.div`
       text-decoration: line-through
         ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
       pointer-events: none;
+    }
+    &:focus + label {
+      outline: 1px solid ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
     }
   }
 

@@ -1,10 +1,10 @@
 import { useContext, useEffect, useRef } from "react";
 import {
-  BiLogoReact,
+  BiLogoBootstrap,
   BiLogoJavascript,
-  BiLogoTypescript,
+  BiLogoReact,
   BiLogoTailwindCss,
-  BiLogoBootstrap
+  BiLogoTypescript
 } from "react-icons/bi";
 import { DiCss3, DiHtml5, DiSass } from "react-icons/di";
 import { SiStyledcomponents } from "react-icons/si";
@@ -206,41 +206,41 @@ export function LandingPage() {
       </S.Skills>
       <S.Project id="project">
         {itens.first.map((img) => (
-          <>
-            <article className="project-item" key={img.id}>
-              <picture className="box-img">
-                <legend className="hoverme">Hover me</legend>
-                <div
-                  ref={inputRef}
-                  onMouseEnter={handleScroll}
-                  className="parallax"
-                  style={{
-                    backgroundImage: `url(${img.url})`
-                  }}
-                ></div>
-              </picture>
-              <aside className="project-text">
-                <hgroup className="title">
-                  <div className="squard"></div>
-                  <h2>{img.title}</h2>
-                </hgroup>
-                <p className="Paragraph-2"> {t("project.text")}</p>
-                <ul className="bange">
-                  {img.tech.map((techs) => (
-                    <li key={img.id}>{techs}</li>
-                  ))}
-                </ul>
-                <a
-                  target="_blank"
-                  href={img.link}
-                  rel="noreferrer"
-                  className="sit"
-                >
-                  {t("project.button")}
-                </a>
-              </aside>
-            </article>
-          </>
+          <article className="project-item" key={`article_${img.id}`}>
+            <picture className="box-img">
+              <legend className="hoverme">Hover me</legend>
+              <div
+                ref={inputRef}
+                onMouseEnter={handleScroll}
+                className="parallax"
+                style={{
+                  backgroundImage: `url(${img.url})`
+                }}
+              ></div>
+            </picture>
+            <aside className="project-text">
+              <hgroup className="title">
+                <div className="squard"></div>
+                <h2>{img.title}</h2>
+              </hgroup>
+              <p className="Paragraph-2"> {t("project.text")}</p>
+              <ul className="bange">
+                {img.tech.map((techs) => (
+                  <li key={`img_${img.id}-${Math.round(Math.random() * 1000)}`}>
+                    {techs}
+                  </li>
+                ))}
+              </ul>
+              <a
+                target="_blank"
+                href={img.link}
+                rel="noreferrer"
+                className="sit"
+              >
+                {t("project.button")}
+              </a>
+            </aside>
+          </article>
         ))}
       </S.Project>
     </main>

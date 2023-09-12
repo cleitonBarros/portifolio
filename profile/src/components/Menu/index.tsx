@@ -1,14 +1,9 @@
 import "animate.css";
 
-import { Dispatch, SetStateAction, useContext } from "react";
+import { useContext } from "react";
 
 import { LanguageContext } from "../../context/useLanguage";
 import * as S from "./style";
-
-interface MenuProps {
-  Open: boolean;
-  close: Dispatch<SetStateAction<boolean>>;
-}
 
 export function Menu({ Open, close }: MenuProps) {
   function closeMenu() {
