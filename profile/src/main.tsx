@@ -1,7 +1,10 @@
 import React from "react";
+// eslint-disable-next-line import-helpers/order-imports
 import ReactDOM from "react-dom/client";
 
 import "./lib/i18n";
+
+import { HelmetProvider } from "react-helmet-async";
 
 import App from "./App.tsx";
 import { DarkModeProvider } from "./context/useDarkMode.tsx";
@@ -12,8 +15,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ChangeLanguageProvider>
       <DarkModeProvider>
-        <GlobalStyles />
-        <App />
+        <HelmetProvider>
+          <GlobalStyles />
+          <App />
+        </HelmetProvider>
       </DarkModeProvider>
     </ChangeLanguageProvider>
   </React.StrictMode>
