@@ -123,7 +123,7 @@ export const Home = styled.section`
     }
   }
 `;
-export const TextField = styled.div`
+export const TextField = styled.article`
   position: relative;
   text-align: center;
 
@@ -221,11 +221,8 @@ export const TextField = styled.div`
     }
   }
 `;
-export const Links = styled.div`
+export const Links = styled.menu`
   ul {
-    &.slow5 {
-      --animate-duration: 1s;
-    }
     li {
       display: inline-flex;
       font-size: 1.5rem;
@@ -273,7 +270,7 @@ export const Links = styled.div`
   }
 `;
 
-export const About = styled.div`
+export const About = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
@@ -318,11 +315,14 @@ export const About = styled.div`
       }
     }
 
-    h4 {
-      margin-top: 2rem;
-      font-weight: 400;
-      color: ${({ theme }) => theme.COLORS.TEXT};
-      text-align: end;
+    cite {
+      h4 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        font-weight: 400;
+        color: ${({ theme }) => theme.COLORS.TEXT};
+        text-align: end;
+      }
     }
   }
 
@@ -389,7 +389,7 @@ export const About = styled.div`
   }
 `;
 
-export const Skills = styled.div`
+export const Skills = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -443,7 +443,7 @@ export const Skills = styled.div`
   }
 `;
 
-export const Project = styled.div`
+export const Project = styled.section`
   padding: 4rem 5%;
   width: 100%;
   display: flex;
@@ -537,7 +537,7 @@ export const Project = styled.div`
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        p {
+        li {
           padding: 0.5rem;
           border-radius: 0.5rem;
           font-size: 1rem;
@@ -603,7 +603,7 @@ export const Project = styled.div`
           display: flex;
           flex-wrap: wrap;
           gap: 1rem;
-          p {
+          li{
             padding: 1rem;
             font-weight: 500;
             border-radius: 1rem;

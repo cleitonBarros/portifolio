@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 import dia from "./../../assets/img/dia.jpg";
 
-export const Header = styled.div`
+export const Header = styled.menu`
   border-top: 2px solid #000;
   position: fixed;
   bottom: 0;
@@ -39,7 +39,7 @@ export const Header = styled.div`
   }
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
   padding: 0 3rem;
   width: 100%;
   height: 100%;

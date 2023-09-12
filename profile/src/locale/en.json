@@ -1,6 +1,6 @@
 {
     "translation": {
-        "myName": "Hi, I am",
+        "alt": "White man, with a pompadour hairstyle, sporting a beard, and wearing prescription glasses. He is wearing a dark green sweater.","myName": "Hi, I am",
         "myNickName": "However you can call me by",
         "role": "I am front-end web developer & UX/UI designer.",
         "projects": "see my projects",
@@ -18,7 +18,7 @@
             "click": "here !"
         },
         "project": {
-            "text":"Built with:",
+            "text": "Built with:",
             "button": "Go to page"
         }
     }

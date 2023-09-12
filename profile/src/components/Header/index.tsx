@@ -41,11 +41,11 @@ export function Header() {
     <>
       <S.Header className={isScroll ? "scrolled" : ""}>
         <S.Nav>
-          <div title="Logo">
+          <h1 title="Logo">
             <a className="logo " href="#">
               ılǝ.
             </a>
-          </div>
+          </h1>
           <Dark />
 
           <ul>

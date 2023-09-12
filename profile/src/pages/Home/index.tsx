@@ -73,7 +73,7 @@ export function LandingPage() {
     console.log(inputRef);
   }
   return (
-    <>
+    <main>
       <S.Home>
         <S.TextField id="inicio">
           <h3 className="Paragraph-1">
@@ -85,7 +85,6 @@ export function LandingPage() {
               </div>
             </div>
           </h3>
-
           <h3 className="Paragraph-1">
             {t("myNickName")}{" "}
             <div className="name">
@@ -95,9 +94,9 @@ export function LandingPage() {
               </div>
             </div>
           </h3>
-          <div className="role">
-            <p>{t("role")}</p>
-          </div>
+
+          <p className="role">{t("role")}</p>
+
           <S.Links>
             <ul>
               <li className="link-1">
@@ -131,13 +130,15 @@ export function LandingPage() {
         </S.TextField>
       </S.Home>
       <S.About id="about">
-        <div className="img">
-          <img src={foto} alt="eu" />
-        </div>
-        <div className="Text">
-          <h2 className="title">
-            <div className="squard"></div> {t("aboutPage.title")}
-          </h2>
+        <picture className="img">
+          <img src={foto} alt={t("alt")} />
+        </picture>
+        <article className="Text">
+          <header>
+            <h2 className="title">
+              <div className="squard"></div> {t("aboutPage.title")}
+            </h2>
+          </header>
           <p className="Paragraph-2">
             {t("aboutPage.description")}
             <a
@@ -148,11 +149,15 @@ export function LandingPage() {
               {t("aboutPage.click")}
             </a>
           </p>
-          <h4 className="sit">
-            &quot; Voir le monde en noir et blanc c&apos;est se priver des
-            couleurs de la vie &quot; - Morgana
-          </h4>
-        </div>
+          <footer>
+            <cite>
+              <h4 className="sit">
+                &quot; Voir le monde en noir et blanc c&apos;est se priver des
+                couleurs de la vie &quot; - Morgana
+              </h4>
+            </cite>
+          </footer>
+        </article>
       </S.About>
       <S.Skills id="skill">
         <ul>
@@ -188,9 +193,9 @@ export function LandingPage() {
       <S.Project id="project">
         {slides.first.map((img) => (
           <>
-            <div className="project-item" key={img.id}>
-              <div className="box-img">
-                <div className="hoverme">Hover me</div>
+            <article className="project-item" key={img.id}>
+              <picture className="box-img">
+                <legend className="hoverme">Hover me</legend>
                 <div
                   ref={inputRef}
                   onMouseEnter={handleScroll}
@@ -199,18 +204,18 @@ export function LandingPage() {
                     backgroundImage: `url(${img.url})`
                   }}
                 ></div>
-              </div>
-              <div className="project-text">
-                <div className="title">
+              </picture>
+              <aside className="project-text">
+                <hgroup className="title">
                   <div className="squard"></div>
                   <h2>{img.title}</h2>
-                </div>
+                </hgroup>
                 <p className="Paragraph-2"> {t("project.text")}</p>
-                <div className="bange">
+                <ul className="bange">
                   {img.tech.map((techs) => (
-                    <p key={img.id}>{techs}</p>
+                    <li key={img.id}>{techs}</li>
                   ))}
-                </div>
+                </ul>
                 <a
                   target="_blank"
                   href={img.link}
@@ -219,11 +224,11 @@ export function LandingPage() {
                 >
                   {t("project.button")}
                 </a>
-              </div>
-            </div>
+              </aside>
+            </article>
           </>
         ))}
       </S.Project>
-    </>
+    </main>
   );
 }
