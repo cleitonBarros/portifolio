@@ -19,8 +19,15 @@
             "click": "aqui !"
         },
         "project": {
-            "text":"Construido com:",
+            "text": "Construido com:",
             "button": "Ir ao site"
+        },
+        "skills": {
+            "title": "Habilidades e Experiência",
+            "sub": "A principal área de atuação é como front-end",
+            "main-text": "Minha stack é ReactJS com TypeScript e styled-components, para mais, tenho experiência com várias outras tecnologias e ferramentas.",
+            "linkedin": "Visite meu",
+            "linkedin2": "para mais detalhes."
         }
     }
 }

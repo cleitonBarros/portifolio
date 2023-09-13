@@ -1,6 +1,7 @@
 {
     "translation": {
-        "alt": "White man, with a pompadour hairstyle, sporting a beard, and wearing prescription glasses. He is wearing a dark green sweater.","myName": "Hi, I am",
+        "alt": "White man, with a pompadour hairstyle, sporting a beard, and wearing prescription glasses. He is wearing a dark green sweater.",
+        "myName": "Hi, I am",
         "myNickName": "However you can call me by",
         "role": "I am front-end web developer & UX/UI designer.",
         "projects": "see my projects",
@@ -20,6 +21,13 @@
         "project": {
             "text": "Built with:",
             "button": "Go to page"
+        },
+        "skills": {
+            "title": "Skills and Experience",
+            "sub": "The main area of expertise is front end.",
+            "main-text": "My stack consists of ReactJS with TypeScript and styled-components, and furthermore, I have experience with various other technologies and tools.",
+            "linkedin": "Visit my",
+            "linkedin2": "for more details."
         }
     }
 }
