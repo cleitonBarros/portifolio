@@ -1,15 +1,11 @@
-import { useState } from "react";
-
 import * as S from "./style";
 
 import * as Dialog from "@radix-ui/react-dialog";
 import { t } from "i18next";
 
 export function Sidemenu() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <Dialog.Root open={open} onOpenChange={setOpen}>
+    <Dialog.Root>
       <S.Hamburger>
         <span />
         <span />
