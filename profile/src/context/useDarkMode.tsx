@@ -16,10 +16,10 @@ interface ProviderProps {
 
 export const DarkModeContext = createContext({} as ThemeContextType);
 
-const localStorageTheme = localStorage.getItem("Elias-theme") as themeType;
-
 export function DarkModeProvider({ children }: ProviderProps) {
-  const [darkMode, setDarkMode] = useState<themeType>(localStorageTheme);
+  const [darkMode, setDarkMode] = useState<themeType>(
+    () => localStorage.getItem("Elias-theme") as themeType
+  );
 
   function changeTheme() {
     const ThemeValue = darkMode === "light" ? "dark" : "light";
@@ -29,7 +29,7 @@ export function DarkModeProvider({ children }: ProviderProps) {
   }
 
   useEffect(() => {
-    if (!localStorageTheme) {
+    if (!darkMode) {
       changeTheme();
       localStorage.setItem("Elias-theme", "light");
     }
