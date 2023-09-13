@@ -18,17 +18,10 @@ export default createGlobalStyle`
     font-family: 'Fira Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .Paragraph-1,
-  .Paragraph-2,
+  .top, .left, .left-2, .bottom, .right, .right-2,
   #download,
-  .role,
-  .link-1,
-  .link-2,
-  .img,
-  .title,
-  .sit,
   .painel,
-  .skill-1,.skill-2,.skill-3,.skill-4,.skill-5,.skill-6,.skill-7,.skill-8,.skill-9,.box-img ,.bange{
+  .bottom-1,.bottom-2,.bottom-3,.bottom-4,.bottom-5,.bottom-6,.bottom-7,.bottom-8,.bottom-9,.bottom-10,.bottom-11,.bottom-12,.box-img ,.bange{
     visibility: hidden;
   }
   html ::-webkit-scrollbar {

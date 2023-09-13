@@ -1,88 +1,35 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import {
   BiLogoReact,
   BiLogoJavascript,
   BiLogoTypescript,
   BiLogoTailwindCss,
-  BiLogoBootstrap
+  BiLogoBootstrap,
+  BiLogoPhp
 } from "react-icons/bi";
-import { DiCss3, DiHtml5, DiSass } from "react-icons/di";
-import { SiStyledcomponents } from "react-icons/si";
+import { DiCss3, DiHtml5, DiSass, DiLaravel } from "react-icons/di";
+import { SiStyledcomponents, SiFigma } from "react-icons/si";
 
 import { itens } from "../../assets";
 import foto from "../../assets/img/foto.png";
 import { DarkModeContext } from "../../context/useDarkMode";
 import { LanguageContext } from "../../context/useLanguage";
+import { AnimationScroll } from "../../lib/scrollReveal";
 import * as S from "./style";
 
 import { Code, ReadCvLogo, UserRectangle } from "@phosphor-icons/react";
-import ScrollReveal from "scrollreveal";
 
 export function LandingPage() {
   const { t } = useContext(LanguageContext);
   const { darkMode } = useContext(DarkModeContext);
 
-  useEffect(() => {
-    const clips = document?.querySelectorAll("video");
+  AnimationScroll();
 
-    if (clips) {
-      for (let i = 0; i < clips.length; i++) {
-        clips[i].addEventListener("mouseenter", () => {
-          clips[i].play();
-        });
-      }
-
-      for (let i = 0; i < clips.length; i++) {
-        clips[i].addEventListener("mouseout", () => {
-          clips[i].pause();
-        });
-      }
-    }
-    ScrollReveal({
-      distance: "60px",
-      duration: 1200
-    });
-    ScrollReveal().reveal(".Paragraph-1", { delay: 300, origin: "top" });
-    ScrollReveal().reveal(".Paragraph-2", { delay: 600, origin: "left" });
-    ScrollReveal().reveal(".role", { delay: 500, origin: "bottom" });
-    ScrollReveal().reveal(".link-1", {
-      delay: 700,
-      origin: "left"
-    });
-    ScrollReveal().reveal(".link-2, .bange", { delay: 700, origin: "right" });
-    ScrollReveal().reveal(".title", { delay: 300, origin: "top" });
-    ScrollReveal().reveal(".img", { delay: 400, origin: "right" });
-    ScrollReveal().reveal(".sit", { delay: 800, origin: "bottom" });
-    ScrollReveal().reveal(".painel", { delay: 800, origin: "top" });
-    ScrollReveal().reveal(".skill-1, .box-img", {
-      delay: 400,
-      origin: "left"
-    });
-    ScrollReveal().reveal(".skill-2", { delay: 600, origin: "top" });
-    ScrollReveal().reveal(".skill-3", { delay: 800, origin: "right" });
-    ScrollReveal().reveal(".skill-4, #download", {
-      delay: 1000,
-      origin: "left"
-    });
-    ScrollReveal().reveal(".skill-5", { delay: 1200, origin: "top" });
-    ScrollReveal().reveal(".skill-6", {
-      delay: 1400,
-      origin: "right"
-    });
-    ScrollReveal().reveal(".skill-7", { delay: 1600, origin: "left" });
-    ScrollReveal().reveal(".skill-8", { delay: 1800, origin: "top" });
-    ScrollReveal().reveal(".skill-9", { delay: 2000, origin: "right" });
-  }, []);
-
-  const inputRef = useRef(null);
-  function handleScroll() {
-    console.log(inputRef);
-  }
   return (
     <main>
       <S.Home>
         <S.TextField id="inicio">
-          <h3 className="Paragraph-1">
+          <h3 className="Paragraph-1 top">
             {t("myName")}{" "}
             <div className="name">
               Cleiton barros,
@@ -91,7 +38,7 @@ export function LandingPage() {
               </div>
             </div>
           </h3>
-          <h3 className="Paragraph-1">
+          <h3 className="Paragraph-1 top">
             {t("myNickName")}{" "}
             <div className="name">
               Eli
@@ -101,11 +48,11 @@ export function LandingPage() {
             </div>
           </h3>
 
-          <p className="role">{t("role")}</p>
+          <p className="role bottom">{t("role")}</p>
 
           <S.Links>
             <ul>
-              <li className="link-1">
+              <li className="left-2">
                 <div className="link-wrap">
                   <div className="link">
                     <a href="#project">
@@ -118,7 +65,7 @@ export function LandingPage() {
                   </div>
                 </div>
               </li>
-              <li className="link-2">
+              <li className="right-2">
                 <div className="link-wrap">
                   <div className="link">
                     <a href="#about">
@@ -136,16 +83,19 @@ export function LandingPage() {
         </S.TextField>
       </S.Home>
       <S.About id="about">
-        <picture className="img">
+        <picture className="img right">
           <img src={foto} alt={t("alt")} />
         </picture>
         <article className="Text">
           <header>
-            <h2 className="title">
+            <h2 className="title top">
               <div className="squard"></div> {t("aboutPage.title")}
             </h2>
           </header>
-          <p className="Paragraph-2">
+          <p
+            aria-describedby={t("aboutPage.description")}
+            className="Paragraph-2 left"
+          >
             {t("aboutPage.description")}
             <a
               href="https://github.com/cleitonBarros"
@@ -156,7 +106,7 @@ export function LandingPage() {
             </a>
           </p>
           <cite>
-            <h4 className="sit">
+            <h4 className="right">
               &quot; Voir le monde en noir et blanc c&apos;est se priver des
               couleurs de la vie &quot; - Morgana
             </h4>
@@ -164,6 +114,7 @@ export function LandingPage() {
           <footer>
             <a
               id="download"
+              className="bottom"
               href={itens.pdf}
               download="CleitonBarros_Frontend Developer"
             >
@@ -174,73 +125,101 @@ export function LandingPage() {
         </article>
       </S.About>
       <S.Skills id="skill">
-        <ul>
-          <li className="skill-1">
-            <BiLogoReact />
-          </li>
-          <li className="skill-2">
-            <BiLogoTypescript />
-          </li>
-          <li className="skill-3">
-            <SiStyledcomponents />
-          </li>
-          <li className="skill-4">
-            <DiHtml5 />
-          </li>
-          <li className="skill-5">
-            <DiCss3 />
-          </li>
-          <li className="skill-6">
-            <BiLogoJavascript />
-          </li>
-          <li className="skill-7">
-            <DiSass />
-          </li>
-          <li className="skill-8">
-            <BiLogoBootstrap />
-          </li>
-          <li className="skill-9">
-            <BiLogoTailwindCss />
-          </li>
-        </ul>
+        <article>
+          <header className="bottom">
+            <h2>{t("skills.title")}</h2>
+            <p>{t("skills.sub")}</p>
+          </header>
+          <div className="text">
+            <p className="left-2">{t("skills.main-text")}</p>
+            <p className="right-2">
+              {t("skills.linkedin")}
+              <a
+                href="https://www.linkedin.com/in/cleitonbarrosmoura/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {" "}
+                Linkedin{" "}
+              </a>
+              {t("skills.linkedin2")}
+            </p>
+          </div>
+          <ul>
+            <li className="bottom-1">
+              <DiHtml5 />
+            </li>
+            <li className="bottom-2">
+              <DiCss3 />
+            </li>
+            <li className="bottom-3">
+              <BiLogoReact />
+            </li>
+            <li className="bottom-4">
+              <BiLogoTypescript />
+            </li>
+            <li className="bottom-5">
+              <BiLogoJavascript />
+            </li>
+            <li className="bottom-6">
+              <SiStyledcomponents />
+            </li>
+            <li className="bottom-7">
+              <DiSass />
+            </li>
+            <li className="bottom-8">
+              <BiLogoBootstrap />
+            </li>
+            <li className="bottom-9">
+              <BiLogoTailwindCss />
+            </li>
+            <li className="bottom-10">
+              <DiLaravel />
+            </li>
+            <li className="bottom-11">
+              <BiLogoPhp />
+            </li>
+            <li className="bottom-12">
+              <SiFigma />
+            </li>
+          </ul>
+        </article>
       </S.Skills>
       <S.Project id="project">
         {itens.first.map((img) => (
-          <>
-            <article className="project-item" key={img.id}>
-              <picture className="box-img">
-                <legend className="hoverme">Hover me</legend>
-                <div
-                  ref={inputRef}
-                  onMouseEnter={handleScroll}
-                  className="parallax"
-                  style={{
-                    backgroundImage: `url(${img.url})`
-                  }}
-                ></div>
-              </picture>
-              <aside className="project-text">
-                <hgroup className="title">
-                  <div className="squard"></div>
-                  <h2>{img.title}</h2>
-                </hgroup>
-                <p className="Paragraph-2"> {t("project.text")}</p>
-                <ul className="bange">
-                  {img.tech.map((techs) => (
-                    <li key={img.id}>{techs}</li>
-                  ))}
-                </ul>
-                <a
-                  target="_blank"
-                  href={img.link}
-                  rel="noreferrer"
-                  className="sit"
-                >
-                  {t("project.button")}
-                </a>
-              </aside>
-            </article>
-          </>
+          <article className="project-item" key={img.id}>
+            <picture className="box-img left-2">
+              <legend className="hoverme">Hover me</legend>
+              <div
+                className="parallax"
+                style={{
+                  backgroundImage: `url(${img.url})`
+                }}
+              ></div>
+            </picture>
+            <aside className="project-text">
+              <hgroup className="title top">
+                <div className="squard"></div>
+                <h2>{img.title}</h2>
+              </hgroup>
+              <p className="Paragraph-2 left"> {t("project.text")}</p>
+              <ul className="bange right-2">
+                {img.tech.map((techs) => (
+                  <li key={`img_${img.id}-${Math.round(Math.random() * 1000)}`}>
+                    {techs}
+                  </li>
+                ))}
+              </ul>
+              <a
+                target="_blank"
+                href={img.link}
+                rel="noreferrer"
+                className="sit"
+              >
+                {t("project.button")}
+              </a>
+            </aside>
+          </article>
         ))}
       </S.Project>
     </main>

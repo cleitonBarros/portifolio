@@ -334,7 +334,6 @@ export const About = styled.section`
         font-size: 1.25rem;
         font-weight: 500;
         color: ${({ theme }) => theme.COLORS.TEXT};
-
       }
       svg {
         fill: ${({ theme }) => theme.COLORS.TEXT};
@@ -418,14 +417,55 @@ export const Skills = styled.section`
   width: 100%;
   padding: 6rem 6%;
 
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    header {
+      h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+        color: ${({ theme }) => theme.COLORS.NAME};
+        margin-bottom: 1rem;
+      }
+      p {
+        text-align: center;
+        color: ${({ theme }) => theme.COLORS.TEXT};
+        font-size: 1.25rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+      }
+    }
+    .text {
+      width: 100%;
+      max-width: 45rem;
+
+      p {
+        text-align: center;
+        color: ${({ theme }) => theme.COLORS.TEXT};
+        font-size: 1.25rem;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+
+        a {
+          text-align: center;
+          font-weight: 700;
+          color: ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
+        }
+      }
+    }
+  }
   ul {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     li {
-      aspect-ratio: 1/1;
       background-color: ${({ theme }) => theme.COLORS.HEADER.MODE.DARK};
       border-radius: 10%;
       border: 2px solid ${({ theme }) => theme.COLORS.TEXTBKG};
@@ -438,7 +478,7 @@ export const Skills = styled.section`
 
       svg {
         color: ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
-        width: 60%;
+        width: 50%;
         height: auto;
         display: block;
       }
@@ -446,18 +486,43 @@ export const Skills = styled.section`
   }
   @media (min-width: 425px) {
     padding: 10rem 10%;
+    article {
+      header {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
     ul {
-      width: 500px;
+      width: 60%;
+      
     }
   }
   @media (min-width: 765px) {
+    article {
+      header {
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
   @media (min-width: 1024px) {
+    article {
+      header {
+        h2 {
+          font-size: 2.25rem;
+        }
+        p {
+          font-size: 1.75rem;
+          font-weight: 400;
+        }
+      }
+    }
     ul {
-      width: 50%;
       li {
-        width: 12rem;
-        height: 12rem;
+        width: 9rem;
+        height: 9rem;
       }
     }
   }
