@@ -1,3 +1,4 @@
+import "@radix-ui/themes/styles.css";
 import React from "react";
 // eslint-disable-next-line import-helpers/order-imports
 import ReactDOM from "react-dom/client";

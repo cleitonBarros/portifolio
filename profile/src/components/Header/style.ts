@@ -48,6 +48,8 @@ export const Nav = styled.nav`
 
     li {
       cursor: pointer;
+      display: flex;
+      align-items: center;
       p {
         background-color: ${({ theme }) => theme.COLORS.HEADER.TRANSLATE};
         padding: 0.5rem;

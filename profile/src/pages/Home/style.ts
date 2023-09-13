@@ -333,6 +333,8 @@ export const About = styled.section`
         width: 10.5rem;
         font-size: 1.25rem;
         font-weight: 500;
+        color: ${({ theme }) => theme.COLORS.TEXT};
+
       }
       svg {
         fill: ${({ theme }) => theme.COLORS.TEXT};
