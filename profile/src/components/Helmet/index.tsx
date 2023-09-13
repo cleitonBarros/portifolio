@@ -18,7 +18,7 @@ export default function helmet() {
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
-        content="https://cleitonfrontendengineer.vercel.app/|"
+        content="https://cleitonfrontendengineer.vercel.app/"
       />
       <meta property="og:title" content="Cleiton Elias de Barros Moura" />
       <meta
