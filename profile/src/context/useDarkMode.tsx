@@ -1,4 +1,10 @@
-import { ReactNode, createContext, useState, useEffect } from "react";
+import {
+  ReactNode,
+  createContext,
+  useState,
+  useEffect,
+  useContext
+} from "react";
 
 import { ThemeProvider } from "styled-components";
 
@@ -14,9 +20,9 @@ interface ProviderProps {
   children: ReactNode;
 }
 
-export const DarkModeContext = createContext({} as ThemeContextType);
+const DarkModeContext = createContext({} as ThemeContextType);
 
-export function DarkModeProvider({ children }: ProviderProps) {
+function DarkModeProvider({ children }: ProviderProps) {
   const [darkMode, setDarkMode] = useState<themeType>(
     () => localStorage.getItem("Elias-theme") as themeType
   );
@@ -46,3 +52,9 @@ export function DarkModeProvider({ children }: ProviderProps) {
     </DarkModeContext.Provider>
   );
 }
+
+function useDarkMode() {
+  const context = useContext(DarkModeContext);
+  return context;
+}
+export { DarkModeProvider, useDarkMode };

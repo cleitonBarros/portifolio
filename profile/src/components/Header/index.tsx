@@ -1,14 +1,14 @@
 import "animate.css";
-import { useContext } from "react";
+//import { useContext } from "react";
 
-import { LanguageContext } from "../../context/useLanguage";
+import { useLangue } from "../../context/useLanguage";
 import { Dark } from "../Dark";
 import { SiderMenu } from "../SideMenu";
 import * as S from "./style";
 
 export function Header() {
-  const useLanguage = useContext(LanguageContext);
-  const Langue = useLanguage?.currentLanguage;
+  const { currentLanguage, handleLanguageChange } = useLangue();
+  const Langue = currentLanguage;
 
   return (
     <>
@@ -22,9 +22,9 @@ export function Header() {
           <Dark />
           <ul>
             <li title="translate">
-              <p onClick={useLanguage?.handleLanguageChange}>
+              <button className="langue" onClick={handleLanguageChange}>
                 {Langue === "pt" ? "PT" : "EN"}
-              </p>
+              </button>
             </li>
             <li className="menu">
               <SiderMenu />

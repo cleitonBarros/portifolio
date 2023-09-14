@@ -1,11 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useContext } from "react";
-
-import { DarkModeContext } from "../../context/useDarkMode";
+import { useDarkMode } from "../../context/useDarkMode";
 import * as S from "./style";
 
 export function Dark() {
-  const { darkMode, changeTheme } = useContext(DarkModeContext);
+  const { darkMode, changeTheme } = useDarkMode();
   return (
     <S.Container>
       <input

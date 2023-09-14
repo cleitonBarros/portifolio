@@ -50,7 +50,7 @@ export const Nav = styled.nav`
       cursor: pointer;
       display: flex;
       align-items: center;
-      p {
+      button.langue {
         background-color: ${({ theme }) => theme.COLORS.HEADER.TRANSLATE};
         padding: 0.5rem;
         border-radius: 50%;

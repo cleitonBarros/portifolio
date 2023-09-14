@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import {
   BiLogoReact,
   BiLogoJavascript,
@@ -12,16 +11,16 @@ import { SiStyledcomponents, SiFigma } from "react-icons/si";
 
 import { itens } from "../../assets";
 import foto from "../../assets/img/foto.png";
-import { DarkModeContext } from "../../context/useDarkMode";
-import { LanguageContext } from "../../context/useLanguage";
+import { useDarkMode } from "../../context/useDarkMode";
+import { useLangue } from "../../context/useLanguage";
 import { AnimationScroll } from "../../lib/scrollReveal";
 import * as S from "./style";
 
 import { Code, ReadCvLogo, UserRectangle } from "@phosphor-icons/react";
 
 export function LandingPage() {
-  const { t } = useContext(LanguageContext);
-  const { darkMode } = useContext(DarkModeContext);
+  const { t } = useLangue();
+  const { darkMode } = useDarkMode();
 
   AnimationScroll();
 
@@ -214,7 +213,7 @@ export function LandingPage() {
                 target="_blank"
                 href={img.link}
                 rel="noreferrer"
-                className="sit"
+                className="bottom"
               >
                 {t("project.button")}
               </a>

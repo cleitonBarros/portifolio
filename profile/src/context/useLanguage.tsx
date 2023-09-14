@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { TFunction } from "i18next";
@@ -14,7 +14,7 @@ interface contextProps {
 
 export const LanguageContext = createContext({} as languageProps);
 
-export function ChangeLanguageProvider({ children }: contextProps) {
+function ChangeLanguageProvider({ children }: contextProps) {
   const {
     t,
     i18n: { changeLanguage, language }
@@ -36,3 +36,8 @@ export function ChangeLanguageProvider({ children }: contextProps) {
     </LanguageContext.Provider>
   );
 }
+function useLangue() {
+  const context = useContext(LanguageContext);
+  return context;
+}
+export { ChangeLanguageProvider, useLangue };

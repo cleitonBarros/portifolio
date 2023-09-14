@@ -1,16 +1,15 @@
 import "animate.css";
 
-import { useContext } from "react";
 import React from "react";
 
-import { LanguageContext } from "../../context/useLanguage";
+import { useLangue } from "../../context/useLanguage";
 import * as S from "./style";
 
 import * as Dialog from "@radix-ui/react-dialog";
 
 export function SiderMenu() {
   const [open, setOpen] = React.useState(false);
-  const { t } = useContext(LanguageContext);
+  const { t } = useLangue();
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <S.Hamburger className={open ? "open" : ""}>
