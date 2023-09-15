@@ -48,7 +48,7 @@ export const Container = styled.div`
   }
   @media (min-width: 1280px) {
     label {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 `;

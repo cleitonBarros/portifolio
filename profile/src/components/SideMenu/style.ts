@@ -40,7 +40,7 @@ export const SidebarMenu = styled(Dialog.Content)`
   }
 `;
 
-export const Nav = styled.nav`
+export const Menu = styled.menu`
   padding: 0 3rem;
   width: 100%;
   height: 100%;
@@ -48,7 +48,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   ul {
-    min-height: 30rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +92,7 @@ export const Nav = styled.nav`
       li {
         a {
           font-weight: 700;
-          font-size: 3.2rem;
+          font-size: 2.5rem;
         }
       }
     }
@@ -102,7 +102,6 @@ export const Hamburger = styled(Dialog.Trigger)`
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 50px auto;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   background-color: transparent;
@@ -112,8 +111,8 @@ export const Hamburger = styled(Dialog.Trigger)`
   span {
     display: block;
     position: absolute;
-    height: 5px;
-    width: 45px;
+    height: 4px;
+    width: 35px;
     background: ${({ theme }) => theme.COLORS.HEADER.MODE.SLASH};
     border-radius: 9px;
     opacity: 1;
@@ -121,7 +120,7 @@ export const Hamburger = styled(Dialog.Trigger)`
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
     &:nth-child(1) {
-      top: 4px;
+      top: 6px;
     }
 
     &:nth-child(2) {
@@ -129,7 +128,7 @@ export const Hamburger = styled(Dialog.Trigger)`
     }
 
     &:nth-child(3) {
-      top: 32px;
+      top: 30px;
     }
   }
 

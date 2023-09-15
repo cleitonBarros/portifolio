@@ -17,7 +17,7 @@ export const Home = styled.section`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 6rem;
   padding: 6rem 6%;
   background-color: ${({ theme }) => theme.COLORS.SECTION};
 
@@ -36,91 +36,12 @@ export const Home = styled.section`
   .text-intro {
     position: relative;
     text-align: center;
-
-    .intro-id {
-      line-height: normal;
-      color: ${({ theme }) => theme.COLORS.H3};
-      letter-spacing: 0.1rem;
-      font-weight: 700;
-      -webkit-text-stroke: 2px ${({ theme }) => theme.COLORS.STROCK};
-      .name {
-        text-transform: none;
-        line-height: 0;
-        position: relative;
-        white-space: nowrap;
-        cursor: pointer;
-        display: inline-block;
-        font-family: "Borel", cursive;
-        font-weight: bold;
-        letter-spacing: normal;
-        color: ${({ theme }) => theme.COLORS.NAME};
-        -webkit-text-stroke: 0;
-        &:hover .wave-wrap .wave {
-          animation: ${waving} 10s linear infinite;
-          opacity: 0.7;
-        }
-        .wave-wrap {
-          overflow: hidden;
-          position: absolute;
-          top: -3rem;
-          left: 0;
-          width: 100%;
-          height: 6.875rem;
-          z-index: -1;
-
-          .wave {
-            position: absolute;
-            background-image: url(${wave});
-            background-repeat: repeat-x;
-            background-position-x: 0;
-            background-position-y: 0;
-            bottom: 50%;
-            opacity: 0.5;
-            width: 90rem;
-            height: 30%;
-
-            &.dark {
-              opacity: 0.3;
-            }
-          }
-        }
-      }
-    }
   }
   @media (min-width: 425px) {
     padding: 10rem 10%;
-
-    li {
-      &:first-child {
-        margin-right: 2rem;
-      }
-    }
-    h3 {
-      font-size: 2rem;
-    }
   }
   @media (min-width: 765px) {
-    padding: 16rem 10%;
-
-    h3 {
-      font-size: 3rem;
-    }
-    p {
-      font-size: 1.25rem;
-    }
-  }
-  @media (min-width: 1024px) {
-    h3 {
-      font-size: 4rem;
-    }
-    p {
-      font-size: 1.5rem;
-    }
-    .text-intro {
-      .intro-id {
-        line-height: 1;
-      }
-    }
+    padding: 15rem 10%;
   }
 `;
 export const TextField = styled.article`
@@ -181,15 +102,13 @@ export const TextField = styled.article`
         }
       }
     }
+  }
 
-    .role {
-      p {
-        font-size: 1rem;
-        text-transform: none;
-        line-height: 2;
-        color: ${({ theme }) => theme.COLORS.PARAGRAPH};
-      }
-    }
+  p {
+    font-size: 1rem;
+    text-transform: none;
+    line-height: 2;
+    color: ${({ theme }) => theme.COLORS.PARAGRAPH};
   }
 
   @media (min-width: 425px) {
@@ -201,22 +120,18 @@ export const TextField = styled.article`
 
   @media (min-width: 770px) {
     h3 {
-      font-size: 3rem;
+      font-size: 2.75rem;
     }
-    .role {
-      p {
-        font-size: 1.25rem;
-      }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 
   @media (min-width: 1280px) {
-    h3 {
-      font-size: 4rem;
-    }
-    .role {
-      p {
-        font-size: 1.5rem;
+    .text-intro {
+      .intro-id {
+        line-height: 1;
       }
     }
   }
@@ -286,7 +201,7 @@ export const About = styled.section`
     border-radius: 12px;
     margin-bottom: 3rem;
     h2 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-family: "Poppins", sans-serif;
       text-transform: uppercase;
       color: ${({ theme }) => theme.COLORS.NAME};
@@ -317,7 +232,7 @@ export const About = styled.section`
 
     cite {
       h4 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin-top: 2rem;
         font-weight: 400;
         color: ${({ theme }) => theme.COLORS.TEXT};
@@ -325,11 +240,11 @@ export const About = styled.section`
       }
     }
     footer {
+      margin-top: 1rem;
       cursor: pointer;
       a {
         display: flex;
         align-items: center;
-        margin-top: 3rem;
         width: 10.5rem;
         font-size: 1.25rem;
         font-weight: 500;
@@ -360,27 +275,20 @@ export const About = styled.section`
       margin-bottom: 0;
       p {
         text-align: left;
-
-        font-size: 1.25rem;
       }
     }
   }
   @media (min-width: 765px) {
-    padding: 16rem 10%;
-
     .Text {
-      max-width: 50rem;
+      max-width: 40rem;
       h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       h4 {
-        font-size: 1.5rem;
         font-weight: 500;
       }
 
       p {
-        font-size: 1.25rem;
-
         a {
           font-weight: 600;
           &:hover {
@@ -396,13 +304,11 @@ export const About = styled.section`
     }
   }
   @media (min-width: 1024px) {
-    .Text {
-      max-width: 50rem;
-    }
+    padding: 14rem 10%;
     .img {
-      max-width: 24rem;
+      max-width: 22rem;
       img {
-        width: 24rem;
+        width: 22rem;
       }
     }
   }
@@ -447,7 +353,7 @@ export const Skills = styled.section`
       p {
         text-align: center;
         color: ${({ theme }) => theme.COLORS.TEXT};
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin-bottom: 1.5rem;
@@ -495,14 +401,14 @@ export const Skills = styled.section`
     }
     ul {
       width: 60%;
-      
     }
   }
   @media (min-width: 765px) {
+    padding: 10rem 10%;
     article {
       header {
         p {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
     }
@@ -510,26 +416,22 @@ export const Skills = styled.section`
   @media (min-width: 1024px) {
     article {
       header {
-        h2 {
-          font-size: 2.25rem;
-        }
         p {
-          font-size: 1.75rem;
           font-weight: 400;
         }
       }
     }
     ul {
       li {
-        width: 9rem;
-        height: 9rem;
+        width: 7rem;
+        height: 7rem;
       }
     }
   }
 `;
 
 export const Project = styled.section`
-  padding: 4rem 5%;
+  padding: 10rem 5% 3rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -649,7 +551,7 @@ export const Project = styled.section`
           height: 30px;
         }
         h2 {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 500;
         }
         p {
@@ -664,7 +566,7 @@ export const Project = styled.section`
       .box-img {
         width: 100%;
         .parallax {
-          height: 32rem;
+          height: 28rem;
         }
       }
     }
@@ -675,21 +577,12 @@ export const Project = styled.section`
   @media (min-width: 1280px) {
     .project-item {
       .project-text {
-        h2 {
-          color: blue;
-          font-size: 3rem;
-          font-weight: 600;
-        }
-        p {
-          font-size: 1.75rem;
-          font-weight: 400;
-        }
         .bange {
           display: flex;
           flex-wrap: wrap;
           gap: 1rem;
           li {
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             font-weight: 500;
             border-radius: 1rem;
             font-size: 1.25rem;
@@ -697,7 +590,7 @@ export const Project = styled.section`
         }
       }
       a {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
   }

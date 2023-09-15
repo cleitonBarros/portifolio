@@ -1,5 +1,3 @@
-import "animate.css";
-
 import React from "react";
 
 import { useLangue } from "../../context/useLanguage";
@@ -20,7 +18,7 @@ export function SiderMenu() {
       <Dialog.Portal>
         <Dialog.Overlay />
         <S.SidebarMenu className={open ? "open" : ""}>
-          <S.Nav>
+          <S.Menu>
             <ul>
               <li onClick={() => setOpen(!open)}>
                 <a href="#">{t("menu.home")}</a>
@@ -32,7 +30,7 @@ export function SiderMenu() {
                 <a href="#project">{t("menu.projects")}</a>
               </li>
             </ul>
-          </S.Nav>
+          </S.Menu>
         </S.SidebarMenu>
       </Dialog.Portal>
     </Dialog.Root>

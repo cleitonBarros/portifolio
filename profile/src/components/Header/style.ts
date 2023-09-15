@@ -6,13 +6,13 @@ export const Header = styled.header`
   left: 0;
 
   width: 100%;
-  height: 8rem;
+  height: 4rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
-  padding: 5rem 6%;
+  padding: 3rem 6%;
   z-index: 90;
 
   transition: all 0.1s ease-out;
@@ -30,7 +30,7 @@ export const Nav = styled.nav`
 
   .logo {
     color: ${({ theme }) => theme.COLORS.HEADER.LOGO.STATIC};
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     font-weight: 600;
     font-family: "Fira Sans", sans-serif;
 
@@ -56,7 +56,7 @@ export const Nav = styled.nav`
         border-radius: 50%;
         object-fit: cover;
         aspect-ratio: 1/1;
-        font-size: 1.6rem;
+        font-size: 1.25rem;
         font-weight: 600;
         font-family: "Fira Sans", sans-serif;
         color: ${({ theme }) => theme.COLORS.HEADER.LANGUAGE};
@@ -68,9 +68,6 @@ export const Nav = styled.nav`
   @media (min-width: 425px) {
     ul {
       gap: 3rem;
-    }
-    .logo {
-      font-size: 5rem;
     }
   }
 `;
