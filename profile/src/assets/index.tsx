@@ -1,5 +1,7 @@
 // import diulio from "./img/diulioperfil.png";
 import pdf from "./cleitonElias_Dev_frontend.pdf";
+import pdf2 from "./cleitonbarros_frontend-enginner.pdf";
+
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
 import doctor from "./img/doctor.png";
@@ -68,5 +70,6 @@ export const itens = {
       tech: ["html", "css", "javascript", "swipe"]
     }
   ],
-  pdf: pdf
+  PT: pdf,
+  EN: pdf2
 };

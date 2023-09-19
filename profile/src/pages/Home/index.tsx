@@ -19,8 +19,9 @@ import * as S from "./style";
 import { Code, ReadCvLogo, UserRectangle } from "@phosphor-icons/react";
 
 export function LandingPage() {
-  const { t } = useLangue();
+  const { t, currentLanguage } = useLangue();
   const { darkMode } = useDarkMode();
+  const Langue = currentLanguage;
 
   AnimationScroll();
 
@@ -114,7 +115,7 @@ export function LandingPage() {
             <a
               id="download"
               className="bottom"
-              href={itens.pdf}
+              href={Langue === "PT" ? itens.PT : itens.EN}
               download="CleitonBarros_Frontend Developer"
             >
               <ReadCvLogo size={50} />
