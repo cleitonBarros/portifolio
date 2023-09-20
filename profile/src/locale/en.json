@@ -20,7 +20,8 @@
         },
         "project": {
             "text": "Built with:",
-            "button": "Go to page"
+            "button": "Go to page",
+            "soon":"Soon ..."
         },
         "skills": {
             "title": "Skills and Experience",

@@ -210,14 +210,25 @@ export function LandingPage() {
                   </li>
                 ))}
               </ul>
-              <a
-                target="_blank"
-                href={img.link}
-                rel="noreferrer"
-                className="bottom"
-              >
-                {t("project.button")}
-              </a>
+              {img.link === "" ? (
+                <a
+                  target="_blank"
+                  href={img.link}
+                  rel="noreferrer"
+                  className="bottom disabled"
+                >
+                  {t("project.soon")}
+                </a>
+              ) : (
+                <a
+                  target="_blank"
+                  href={img.link}
+                  rel="noreferrer"
+                  className="bottom"
+                >
+                  {t("project.button")}
+                </a>
+              )}
             </aside>
           </article>
         ))}

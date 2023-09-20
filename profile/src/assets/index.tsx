@@ -1,12 +1,13 @@
 // import diulio from "./img/diulioperfil.png";
-import pdf from "./cleitonElias_Dev_frontend.pdf";
 import pdf2 from "./cleitonbarros_frontend-enginner.pdf";
-
+import pdf from "./cleitonElias_Dev_frontend.pdf";
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
 import doctor from "./img/doctor.png";
 import Erick from "./img/Erick.png";
 import mysthik from "./img/mysthik.png";
+import diulio from "./img/diulio.jpg";
+import corps from "./img/CorpsParle.png";
 
 export const itens = {
   first: [
@@ -44,7 +45,8 @@ export const itens = {
         "typescript",
         "styled-components",
         "i18n",
-        "scrollReveal"
+        "scrollReveal",
+        "radix"
       ]
     },
     {
@@ -59,7 +61,8 @@ export const itens = {
         "css",
         "typescript",
         "styled-components",
-        "scrollReveal"
+        "scrollReveal",
+        "radix"
       ]
     },
     {
@@ -68,6 +71,28 @@ export const itens = {
       url: doctor,
       link: "https://cleitonbarros.github.io/DoctorCare/",
       tech: ["html", "css", "javascript", "swipe"]
+    },
+    {
+      id: 5,
+      title: "Corps Parle",
+      url: corps,
+      link: "",
+      tech: [
+        "react",
+        "html",
+        "css",
+        "typescript",
+        "styled-components",
+        "scrollReveal",
+        "radix"
+      ]
+    },
+    {
+      id: 6,
+      title: "Diulio",
+      url: diulio,
+      link: "",
+      tech: ["Em breve"]
     }
   ],
   PT: pdf,

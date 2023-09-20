@@ -541,6 +541,12 @@ export const Project = styled.section`
       color: ${({ theme }) => theme.COLORS.BACKGROUND};
       font-size: 1rem;
       font-weight: 600;
+
+      &.disabled {
+        cursor: not-allowed;
+        background-color: gray;
+        pointer-events: none;
+      }
     }
   }
   @media (min-width: 765px) {

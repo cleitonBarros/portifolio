@@ -20,7 +20,8 @@
         },
         "project": {
             "text": "Construido com:",
-            "button": "Ir ao site"
+            "button": "Ir ao site",
+            "soon":"Em breve ..."
         },
         "skills": {
             "title": "Habilidades e Experiência",
