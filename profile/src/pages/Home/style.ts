@@ -353,7 +353,7 @@ export const Skills = styled.section`
       p {
         text-align: center;
         color: ${({ theme }) => theme.COLORS.TEXT};
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
         margin-bottom: 1.5rem;
