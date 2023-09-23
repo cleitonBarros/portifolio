@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <S.Container>
       <p>
-        Feito por 🏳️‍🌈
+        Feito por 💜
         <a
           href="https://github.com/cleitonBarros"
           target="_blank"
