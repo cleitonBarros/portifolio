@@ -3,11 +3,11 @@ import pdf2 from "./cleitonbarros_frontend-enginner.pdf";
 import pdf from "./cleitonElias_Dev_frontend.pdf";
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
+import corps from "./img/CorpsParle.png";
+import diulio from "./img/diulio.jpg";
 import doctor from "./img/doctor.png";
 import Erick from "./img/Erick.png";
 import mysthik from "./img/mysthik.png";
-import diulio from "./img/diulio.jpg";
-import corps from "./img/CorpsParle.png";
 
 export const itens = {
   first: [
@@ -34,7 +34,7 @@ export const itens = {
       tech: ["html", "css", "sass", "scrollReveal"]
     },
     {
-      id: 5,
+      id: 3,
       title: "Portfolio",
       url: cleiton,
       link: "https://cleitonfrontendengineer.vercel.app/",
@@ -50,7 +50,7 @@ export const itens = {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Mysthik",
       url: mysthik,
       alt: "Ir ao site",
@@ -66,17 +66,10 @@ export const itens = {
       ]
     },
     {
-      id: 4,
-      title: "DoctorCare",
-      url: doctor,
-      link: "https://cleitonbarros.github.io/DoctorCare/",
-      tech: ["html", "css", "javascript", "swipe"]
-    },
-    {
       id: 5,
       title: "Corps Parle",
       url: corps,
-      link: "",
+      link: "https://corps-parle.vercel.app/",
       tech: [
         "react",
         "html",
@@ -89,6 +82,13 @@ export const itens = {
     },
     {
       id: 6,
+      title: "DoctorCare",
+      url: doctor,
+      link: "https://cleitonbarros.github.io/DoctorCare/",
+      tech: ["html", "css", "javascript", "swipe"]
+    },
+    {
+      id: 7,
       title: "Diulio",
       url: diulio,
       link: "",

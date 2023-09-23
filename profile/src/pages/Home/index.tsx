@@ -22,6 +22,7 @@ export function LandingPage() {
   const { t, currentLanguage } = useLangue();
   const { darkMode } = useDarkMode();
   const Langue = currentLanguage;
+  console.log(Langue);
 
   AnimationScroll();
 
