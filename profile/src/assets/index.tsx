@@ -4,7 +4,7 @@ import pdf from "./cleitonElias_Dev_frontend.pdf";
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
 import corps from "./img/CorpsParle.png";
-import diulio from "./img/diulio.jpg";
+import diulio from "./img/diulio.png";
 import doctor from "./img/doctor.png";
 import Erick from "./img/Erick.png";
 import mysthik from "./img/mysthik.png";
@@ -17,7 +17,7 @@ export const itens = {
       url: Erick,
       link: "https://erickalvezartstudio.vercel.app/",
       tech: [
-        "react",
+        "reactJS",
         "html",
         "css",
         "typescript",
@@ -39,7 +39,7 @@ export const itens = {
       url: cleiton,
       link: "https://cleitonfrontendengineer.vercel.app/",
       tech: [
-        "react",
+        "reactJS",
         "html",
         "css",
         "typescript",
@@ -56,7 +56,7 @@ export const itens = {
       alt: "Ir ao site",
       link: "https://mysthik.vercel.app/",
       tech: [
-        "react",
+        "reactJS",
         "html",
         "css",
         "typescript",
@@ -71,7 +71,7 @@ export const itens = {
       url: corps,
       link: "https://corps-parle.vercel.app/",
       tech: [
-        "react",
+        "reactJS",
         "html",
         "css",
         "typescript",
@@ -92,7 +92,7 @@ export const itens = {
       title: "Diulio",
       url: diulio,
       link: "",
-      tech: ["Em breve"]
+      tech: ["reactJS", "html", "typescript", "tailwind", "tailwind-variants"]
     }
   ],
   PT: pdf,
