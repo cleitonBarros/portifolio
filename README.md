@@ -17,8 +17,8 @@
 * ![CSS]
 * ![STYLED]
 * [i18next](https://www.i18next.com/)
-* [hamburger-react](https://hamburger-react.netlify.app/)
-* [animate.css](https://animate.style/)
+* [radix](https://www.radix-ui.com/)
+* [ScrollReveal](https://www.radix-ui.com/)
 * [react-icons](https://react-icons.github.io/react-icons)
 * [phosphor-icons](https://phosphoricons.com/)
   
