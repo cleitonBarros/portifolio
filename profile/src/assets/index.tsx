@@ -1,6 +1,6 @@
 // import diulio from "./img/diulioperfil.png";
 import pdf2 from "./cleitonbarros_frontend-enginner.pdf";
-import pdf from "./cleitonElias_Dev_frontend.pdf";
+import pdf from "./cleitonMoura_frontendDeveloper.pdf";
 import barbe from "./img/bem.png";
 import cleiton from "./img/cleiton.png";
 import corps from "./img/CorpsParle.png";

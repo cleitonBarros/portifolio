@@ -3,10 +3,10 @@ import {
   BiLogoJavascript,
   BiLogoTypescript,
   BiLogoTailwindCss,
-  BiLogoBootstrap,
-  BiLogoPhp
+  BiLogoBootstrap
 } from "react-icons/bi";
-import { DiCss3, DiHtml5, DiSass, DiLaravel } from "react-icons/di";
+import { DiCss3, DiHtml5, DiSass } from "react-icons/di";
+import { FaVuejs, FaAngular } from "react-icons/fa";
 import { SiStyledcomponents, SiFigma } from "react-icons/si";
 
 import { itens } from "../../assets";
@@ -116,7 +116,7 @@ export function LandingPage() {
             <a
               id="download"
               className="bottom"
-              href={Langue === "PT" ? itens.PT : itens.EN}
+              href={Langue === "pt" ? itens.PT : itens.EN}
               download="CleitonBarros_Frontend Developer"
             >
               <ReadCvLogo size={50} />
@@ -174,14 +174,14 @@ export function LandingPage() {
             <li className="bottom-9">
               <BiLogoTailwindCss />
             </li>
-            <li className="bottom-10">
-              <DiLaravel />
-            </li>
-            <li className="bottom-11">
-              <BiLogoPhp />
-            </li>
             <li className="bottom-12">
               <SiFigma />
+            </li>
+            <li className="bottom-11">
+              <FaVuejs />
+            </li>
+            <li className="bottom-10">
+              <FaAngular />
             </li>
           </ul>
         </article>
